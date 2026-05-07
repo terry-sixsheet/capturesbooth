@@ -32,8 +32,10 @@ const plans = [
     name: "Add-on",
     desc: "Power-ups for serious operators.",
     price: "Custom",
-    period: "Add-on Features",
+    period: "Extend Your Experience",
     items: [
+      "Coupon System",
+      "Payment Integration",
       "AI Photo Enhancement",
       "Live Slideshow & Social Wall",
       "Custom Branded Microsites",
