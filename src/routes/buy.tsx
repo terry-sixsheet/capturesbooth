@@ -26,7 +26,7 @@ const STEPS = ["Account", "Plan", "Add-ons", "Checkout"];
 
 function BuyPage() {
   const search = useSearch({ from: "/buy" });
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [state, setState] = useState({
     ...DEFAULT_STATE,
     cycle: (search.cycle as BillingCycle) ?? DEFAULT_STATE.cycle,
