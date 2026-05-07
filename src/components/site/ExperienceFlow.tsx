@@ -19,27 +19,24 @@ export function ExperienceFlow() {
     <Section
       eyebrow="Experience Flow"
       title={<>From Start to <span className="text-orange-impact">Share</span></>}
-      description="Designed for seamless real-world event experiences — every screen, every tap, engineered for speed and joy."
+      description="Eleven simple steps — from first tap to final share."
+      align="center"
     >
-      <div className="relative">
-        <div className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-lemon/40 to-transparent hidden lg:block" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <div
-              key={s.n}
-              className="group relative rounded-2xl border border-border bg-card/40 p-5 hover-lift hover:border-lemon/40"
-              style={{ animationDelay: `${i * 0.04}s` }}
-            >
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-3xl font-black text-lemon">{s.n}</span>
-                <span className="h-2 w-2 rounded-full bg-lemon group-hover:animate-pulse" />
-              </div>
-              <div className="mt-3 font-semibold text-foreground">{s.title}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{s.desc}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ol className="mx-auto max-w-3xl divide-y divide-border/60 rounded-2xl border border-border bg-card/40">
+        {steps.map((s) => (
+          <li
+            key={s.n}
+            className="group flex items-center gap-5 px-5 py-4 transition-colors hover:bg-lemon/5"
+          >
+            <span className="font-display text-xl font-black text-lemon w-10 shrink-0 tabular-nums">
+              {s.n}
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-lemon shrink-0" />
+            <span className="font-semibold text-foreground min-w-[140px]">{s.title}</span>
+            <span className="text-sm text-muted-foreground truncate">{s.desc}</span>
+          </li>
+        ))}
+      </ol>
     </Section>
   );
 }
