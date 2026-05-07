@@ -104,7 +104,8 @@ export function PricingPreview() {
             ))}
           </ul>
           <Link
-            to="/pricing"
+            to="/buy"
+            search={{ cycle }}
             className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-transform hover:scale-[1.02] bg-lemon text-primary-foreground"
           >
             Buy Now
