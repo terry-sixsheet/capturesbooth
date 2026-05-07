@@ -5,12 +5,10 @@ import { Logo } from "./Logo";
 
 const links = [
   { to: "/features", label: "Features" },
-  { to: "/use-cases", label: "Use Cases" },
   { to: "/showcase", label: "Showcase" },
   { to: "/pricing", label: "Pricing" },
   { to: "/download", label: "Download" },
   { to: "/how-to-use", label: "How To Use" },
-  { to: "/customers", label: "Customers" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

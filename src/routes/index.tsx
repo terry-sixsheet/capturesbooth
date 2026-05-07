@@ -6,6 +6,7 @@ import { ExperienceFlow } from "@/components/site/ExperienceFlow";
 import { CoreFeatures } from "@/components/site/CoreFeatures";
 import { Showcase } from "@/components/site/Showcase";
 import { UseCases } from "@/components/site/UseCases";
+import { Customers } from "@/components/site/Customers";
 import { WhyCaptures } from "@/components/site/WhyCaptures";
 import { PricingPreview } from "@/components/site/PricingPreview";
 import { DownloadCta } from "@/components/site/DownloadCta";
@@ -25,6 +26,7 @@ function Index() {
       <CoreFeatures />
       <Showcase />
       <UseCases />
+      <Customers />
       <WhyCaptures />
       <PricingPreview />
       <DownloadCta />
