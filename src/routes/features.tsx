@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CoreFeatures } from "@/components/site/CoreFeatures";
+import { AddonsExtend } from "@/components/site/AddonsExtend";
 import { ExperienceFlow } from "@/components/site/ExperienceFlow";
 import { DownloadCta } from "@/components/site/DownloadCta";
 import { Section } from "@/components/site/Section";
@@ -26,6 +27,7 @@ function FeaturesPage() {
         align="center"
       />
       <CoreFeatures />
+      <AddonsExtend showPrice={false} />
       <ExperienceFlow />
       <DownloadCta />
     </>
