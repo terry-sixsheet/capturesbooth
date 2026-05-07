@@ -20,7 +20,15 @@ const proItems = [
   "Printing system",
 ];
 
-const freeItems = ["Single event", "Limited 200 images / event", "Photo + GIF capture", "Basic frames"];
+const freeItems = [
+  "Single event",
+  "Limited 200 images / event",
+  "DSLR + webcam capture",
+  "Frame editor + brand overlays",
+  "Printing system",
+  "Photo + GIF capture",
+  "Basic frames",
+];
 
 export function PricingPreview() {
   const [cycle, setCycle] = useState<BillingCycle>("year");
