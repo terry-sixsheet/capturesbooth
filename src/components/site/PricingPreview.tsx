@@ -28,24 +28,6 @@ const plans = [
     cta: { label: "Buy Now", to: "/pricing" as const },
     extra: "1 Week 1,500 ฿ · 1 Year 5,900 ฿",
   },
-  {
-    name: "Add-on",
-    desc: "Power-ups for serious operators.",
-    price: "Custom",
-    period: "Extend Your Experience",
-    items: [
-      "Coupon System",
-      "Payment Integration",
-      "AI Photo Enhancement",
-      "Live Slideshow & Social Wall",
-      "Custom Branded Microsites",
-      "Advanced Print Layouts",
-      "Multi-language Kiosk UI",
-      "Priority Support & Onboarding",
-    ],
-    cta: { label: "Talk to Sales", to: "/contact" as const },
-    extra: "Pricing per add-on · Contact us",
-  },
 ];
 
 export function PricingPreview() {
@@ -53,10 +35,10 @@ export function PricingPreview() {
     <Section
       eyebrow="Pricing"
       title={<>Simple, premium <span className="text-lemon">pricing</span></>}
-      description="Free to start. Pro to scale. Add-ons to go further."
+      description="Free to start. Pro to scale. No hidden fees."
       align="center"
     >
-      <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
         {plans.map((p) => (
           <div
             key={p.name}

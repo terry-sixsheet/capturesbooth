@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PricingPreview } from "@/components/site/PricingPreview";
+import { AddonsExtend } from "@/components/site/AddonsExtend";
 import { FAQ } from "@/components/site/FAQ";
 import { Section } from "@/components/site/Section";
 
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/pricing")({
         align="center"
       />
       <PricingPreview />
+      <AddonsExtend showPrice={true} />
       <FAQ />
     </>
   ),
