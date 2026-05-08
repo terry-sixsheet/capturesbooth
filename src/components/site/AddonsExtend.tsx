@@ -53,7 +53,7 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
       description="Power-ups for serious operators — add only what you need."
     >
       <div className="grid gap-5 md:grid-cols-3">
-        {addons.map(({ icon: Icon, title, price, items, note, cta }) => (
+        {addons.map(({ icon: Icon, title, price, items, note, cta, partnerLogo }) => (
           <div
             key={title}
             className="rounded-3xl border border-border bg-card/60 p-7 hover-lift hover:border-orange-impact/40"
@@ -66,6 +66,16 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
             </div>
             <h4 className="mt-5 font-display text-xl font-bold">{title}</h4>
             {note && <div className="mt-1 text-xs text-muted-foreground">{note}</div>}
+            {partnerLogo && (
+              <a
+                href={partnerLogo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center rounded-md bg-white px-3 py-1.5 hover:opacity-90 transition-opacity"
+              >
+                <img src={partnerLogo.src} alt={partnerLogo.alt} className="h-5 w-auto" />
+              </a>
+            )}
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {items.map((it) => (
                 <li key={it} className="flex items-center gap-2">
