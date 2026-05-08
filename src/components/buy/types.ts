@@ -11,22 +11,22 @@ export const PLAN_PRICING: Record<BillingCycle, { price: number; label: string; 
 export const ADDONS: { id: AddonId; title: string; price: number | "custom"; note?: string; items: string[] }[] = [
   {
     id: "coupon",
-    title: "Coupon System",
+    title: "Promotion Engine",
     price: 1000,
-    items: ["Promotion campaigns", "Event coupons", "QR redemption"],
+    items: ["Promo campaigns", "QR redemption", "Discount codes", "Reward experiences"],
   },
   {
     id: "payment",
-    title: "Payment Integration",
+    title: "CAP*TURES PAY",
     price: 10000,
     note: "Partnered with Chillpay",
-    items: ["QR payment", "Credit card", "Event monetization"],
+    items: ["QR payment", "Credit card", "Paid event flows", "Instant checkout"],
   },
   {
     id: "branding",
-    title: "Custom Branding",
+    title: "Custom Experience Studio",
     price: "custom",
-    items: ["Custom UI", "Custom colors", "Enterprise setup"],
+    items: ["Custom event flow", "CRM & registration", "Gamification & live gallery", "Advanced interaction logic"],
   },
 ];
 
