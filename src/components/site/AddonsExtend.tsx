@@ -1,8 +1,19 @@
 import { Section } from "./Section";
 import { Ticket, CreditCard, Code2, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import chillpayLogo from "@/assets/chillpay-logo.png";
 
-const addons = [
+type Addon = {
+  icon: typeof Ticket;
+  title: string;
+  price: string;
+  items: string[];
+  note?: string;
+  cta?: string;
+  partnerLogo?: { src: string; href: string; alt: string };
+};
+
+const addons: Addon[] = [
   {
     icon: Ticket,
     title: "Coupon System",
@@ -15,12 +26,21 @@ const addons = [
     price: "+10,000 THB",
     items: ["QR payment", "Credit card", "Event monetization"],
     note: "Partnered with Chillpay",
+    partnerLogo: { src: chillpayLogo, href: "https://www.chillpay.co/en/", alt: "ChillPay" },
   },
   {
     icon: Code2,
-    title: "Custom Software",
+    title: "Customize your Software",
     price: "Custom",
-    items: ["Branded UI", "Bespoke flows", "Hardware integration"],
+    items: [
+      "Register Flow",
+      "CRM",
+      "Gamification",
+      "Real-time Live Gallery",
+      "Vending Machine & Integration hub",
+      "Basic Layout & Interaction",
+      "Custom Illustrations & Advanced UX Logic",
+    ],
     cta: "Contact Sales",
   },
 ];
