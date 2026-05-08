@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { TrustedBy } from "@/components/site/TrustedBy";
 import { WhatIs } from "@/components/site/WhatIs";
+import { ExperienceOverview } from "@/components/site/ExperienceOverview";
 
 import { CoreFeatures } from "@/components/site/CoreFeatures";
 import { Showcase } from "@/components/site/Showcase";
@@ -22,6 +23,7 @@ function Index() {
       <Hero />
       <TrustedBy />
       <WhatIs />
+      <ExperienceOverview />
       <CoreFeatures />
       <Showcase />
       <UseCases />
