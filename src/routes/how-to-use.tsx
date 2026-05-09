@@ -38,6 +38,25 @@ function HowTo() {
         description="Short videos, clear steps, real answers."
         align="center"
       />
+      <Section eyebrow="Manual" title={<>Full <span className="text-lemon">Documentation</span></>} description="Complete product manual, advanced configuration, and reference guides — hosted on GitBook.">
+        <div className="max-w-3xl">
+          <a
+            href="https://www.gitbook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-5 rounded-3xl glass p-6 hover-lift hover:border-lemon/40 transition"
+          >
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-lemon/15 text-lemon">
+              <BookOpen className="h-6 w-6" />
+            </div>
+            <div className="flex-1">
+              <div className="font-display text-lg font-bold">CAP*TURES Manual on GitBook</div>
+              <div className="mt-1 text-sm text-muted-foreground">Browse the full handbook — setup, features, integrations, and troubleshooting.</div>
+            </div>
+            <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-lemon transition" />
+          </a>
+        </div>
+      </Section>
       <Section eyebrow="Tutorials" title="Video walkthroughs">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {tutorials.map((t) => (
