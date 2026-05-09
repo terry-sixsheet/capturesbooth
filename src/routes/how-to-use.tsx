@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { PlayCircle, FileText, HelpCircle, BookOpen, ArrowUpRight } from "lucide-react";
+import { PlayCircle, FileText, BookOpen, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/how-to-use")({
   head: () => ({
@@ -23,11 +23,6 @@ const tutorials = [
   { title: "Multi-Event Dashboard", time: "5 min", desc: "Manage workflows across simultaneous events." },
 ];
 
-const faq = [
-  { q: "Camera not detected?", a: "Ensure Canon EOS Utility is closed. Reconnect USB and restart CAP*TURES." },
-  { q: "Print queue stuck?", a: "Open printer config → Reset queue. Verify ribbon and paper alignment." },
-  { q: "QR not loading?", a: "Check internet on the booth. Toggle gallery sync in Settings → Cloud." },
-];
 
 function HowTo() {
   return (
@@ -80,21 +75,6 @@ function HowTo() {
               <div className="font-display text-3xl font-black text-lemon">0{i + 1}</div>
               <div className="mt-3 font-semibold">{s}</div>
               <FileText className="mt-4 h-4 w-4 text-muted-foreground" />
-            </div>
-          ))}
-        </div>
-      </Section>
-      <Section eyebrow="Troubleshooting" title="Common questions">
-        <div className="space-y-3 max-w-3xl">
-          {faq.map((f) => (
-            <div key={f.q} className="rounded-2xl glass p-5">
-              <div className="flex items-start gap-3">
-                <HelpCircle className="h-5 w-5 text-lemon mt-0.5" />
-                <div>
-                  <div className="font-semibold">{f.q}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{f.a}</div>
-                </div>
-              </div>
             </div>
           ))}
         </div>
