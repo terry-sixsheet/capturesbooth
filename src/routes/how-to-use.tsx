@@ -23,11 +23,6 @@ const tutorials = [
   { title: "Multi-Event Dashboard", time: "5 min", desc: "Manage workflows across simultaneous events." },
 ];
 
-const faq = [
-  { q: "Camera not detected?", a: "Ensure Canon EOS Utility is closed. Reconnect USB and restart CAP*TURES." },
-  { q: "Print queue stuck?", a: "Open printer config → Reset queue. Verify ribbon and paper alignment." },
-  { q: "QR not loading?", a: "Check internet on the booth. Toggle gallery sync in Settings → Cloud." },
-];
 
 function HowTo() {
   return (
