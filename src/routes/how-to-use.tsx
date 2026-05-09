@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { PlayCircle, FileText, HelpCircle } from "lucide-react";
+import { PlayCircle, FileText, HelpCircle, BookOpen, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/how-to-use")({
   head: () => ({
