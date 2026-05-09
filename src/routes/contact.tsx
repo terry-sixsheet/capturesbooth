@@ -29,9 +29,16 @@ function Contact() {
       href: "https://line.me/R/ti/p/@sixsheet",
     },
     {
+      icon: Phone,
+      label: "Phone",
+      value: "080-268-6632",
+      href: "tel:+66802686632",
+    },
+    {
       icon: MapPin,
-      label: "Based in",
-      value: "Bangkok, Thailand",
+      label: "Office",
+      value: "33 Soi Pradipat 17, Pradipat Road, Samsennai, Phayathai, Bangkok 10400",
+      href: "https://maps.google.com/?q=33+Soi+Pradipat+17+Bangkok+10400",
     },
   ];
 
