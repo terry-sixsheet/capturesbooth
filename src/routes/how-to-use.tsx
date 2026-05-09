@@ -84,21 +84,6 @@ function HowTo() {
           ))}
         </div>
       </Section>
-      <Section eyebrow="Troubleshooting" title="Common questions">
-        <div className="space-y-3 max-w-3xl">
-          {faq.map((f) => (
-            <div key={f.q} className="rounded-2xl glass p-5">
-              <div className="flex items-start gap-3">
-                <HelpCircle className="h-5 w-5 text-lemon mt-0.5" />
-                <div>
-                  <div className="font-semibold">{f.q}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{f.a}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
     </>
   );
 }
