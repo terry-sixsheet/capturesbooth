@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Mail, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Phone, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
