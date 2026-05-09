@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Mail, MessageCircle, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Phone, ArrowUpRight, Headphones, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import expertsImg from "@/assets/contact-experts.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -16,72 +17,100 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const channels = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "photoboothexpert@sixsheet.me",
-      href: "mailto:photoboothexpert@sixsheet.me",
-    },
-    {
-      icon: MessageCircle,
-      label: "LINE Official Account",
-      value: "@sixsheet",
-      href: "https://line.me/R/ti/p/@sixsheet",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "080-268-6632",
-      href: "tel:+66802686632",
-    },
-    {
-      icon: MapPin,
-      label: "Office",
-      value: "33 Soi Pradipat 17, Pradipat Road, Samsennai, Phayathai, Bangkok 10400",
-      href: "https://maps.google.com/?q=33+Soi+Pradipat+17+Bangkok+10400",
-    },
+    { icon: Mail, label: "Email", value: "photoboothexpert@sixsheet.me", href: "mailto:photoboothexpert@sixsheet.me" },
+    { icon: MessageCircle, label: "LINE Official Account", value: "@sixsheet", href: "https://line.me/R/ti/p/@sixsheet" },
+    { icon: Phone, label: "Phone", value: "080-268-6632", href: "tel:+66802686632" },
+    { icon: MapPin, label: "Office", value: "33 Soi Pradipat 17, Pradipat Road, Samsennai, Phayathai, Bangkok 10400", href: "https://maps.google.com/?q=33+Soi+Pradipat+17+Bangkok+10400" },
+  ];
+
+  const promises = [
+    { icon: Clock, title: "Reply within 1 business hour", body: "Mon–Sat, 9:00–19:00 ICT. Real humans, no bots." },
+    { icon: Headphones, title: "Dedicated event specialist", body: "One expert from first message through event day." },
+    { icon: ShieldCheck, title: "Onsite & remote support", body: "We've supported 500+ events across Thailand." },
   ];
 
   return (
-    <Section
-      eyebrow="Contact"
-      title={<>Talk to our <span className="text-lemon">Expert</span></>}
-      description="Tell us about your event, your studio, or your custom build idea — our photobooth experts will get back to you fast."
-      align="center"
-    >
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-        {channels.map(({ icon: Icon, label, value, href }) => {
-          const content = (
-            <>
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-lemon/15 text-lemon">
-                <Icon className="h-5 w-5" />
+    <>
+      <Section
+        eyebrow="Contact"
+        title={<>Talk to our <span className="text-lemon">Expert</span></>}
+        description="Real photobooth professionals — not a ticket queue. Tell us about your event, studio, or custom build and we'll guide you end-to-end."
+        align="center"
+      >
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] max-w-6xl mx-auto items-center">
+          <div className="relative rounded-3xl overflow-hidden glass border border-lemon/20">
+            <img
+              src={expertsImg}
+              alt="CAP*TURES expert support team"
+              width={1280}
+              height={896}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+              <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-lemon">
+                <Sparkles className="h-3 w-3" />
+                Expert Support Team
               </div>
-              <div className="mt-5">
-                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{label}</div>
-                <div className="mt-1 font-display text-lg font-bold break-words">{value}</div>
-              </div>
-              {href && (
-                <ArrowUpRight className="absolute top-5 right-5 h-4 w-4 text-muted-foreground group-hover:text-lemon transition" />
-              )}
-            </>
-          );
-          return href ? (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group relative rounded-2xl glass p-6 hover-lift hover:border-lemon/40 transition"
-            >
-              {content}
-            </a>
-          ) : (
-            <div key={label} className="relative rounded-2xl glass p-6">
-              {content}
+              <h3 className="mt-3 font-display text-2xl sm:text-3xl font-black leading-tight">
+                Real people. <span className="text-lemon">Real expertise.</span>
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground max-w-md">
+                A team of event tech specialists ready to help you ship the perfect experience.
+              </p>
             </div>
-          );
-        })}
-      </div>
-    </Section>
+          </div>
+
+          <div className="space-y-3">
+            {promises.map(({ icon: Icon, title, body }) => (
+              <div key={title} className="rounded-2xl glass p-5 flex items-start gap-4 hover-lift">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-lemon/15 text-lemon">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="font-display text-base font-bold">{title}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{body}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section eyebrow="Get in touch" title={<>Reach us your <span className="text-lemon">way</span></>} align="center">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          {channels.map(({ icon: Icon, label, value, href }) => {
+            const content = (
+              <>
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-lemon/15 text-lemon">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div className="mt-5">
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{label}</div>
+                  <div className="mt-1 font-display text-base font-bold break-words">{value}</div>
+                </div>
+                {href && <ArrowUpRight className="absolute top-5 right-5 h-4 w-4 text-muted-foreground group-hover:text-lemon transition" />}
+              </>
+            );
+            return href ? (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="group relative rounded-2xl glass p-6 hover-lift hover:border-lemon/40 transition"
+              >
+                {content}
+              </a>
+            ) : (
+              <div key={label} className="relative rounded-2xl glass p-6">
+                {content}
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+    </>
   );
 }
