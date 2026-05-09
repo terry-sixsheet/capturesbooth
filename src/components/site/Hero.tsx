@@ -1,8 +1,8 @@
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, CalendarCheck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { HeroVisual } from "./HeroVisual";
 
-const tags = ["Photo", "GIF", "Video", "Printing", "QR Sharing", "Payment"];
+const tags = ["Event Mgmt", "AI Experience", "Live Gallery", "Instant Sharing", "Client Delivery"];
 
 export function Hero() {
   return (
@@ -13,31 +13,31 @@ export function Hero() {
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.22em] text-lemon">
             <Sparkles className="h-3.5 w-3.5" />
-            Modern Photo Booth Platform
+            The Photobooth Business OS
           </span>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black leading-[0.95] tracking-tight text-balance">
-            Run More Than a Booth.
+            The Operating System for
             <br />
-            <span className="text-gradient-lemon">Run the Experience.</span>
+            <span className="text-gradient-lemon">Modern Photobooth Businesses.</span>
           </h1>
           <p className="mt-7 max-w-xl text-lg text-muted-foreground text-pretty">
-            Modern photobooth software built for events, weddings, activations, and experience businesses.
-            Capture, share, and monetize — all from one platform.
+            Event management, AI experience, instant sharing, live gallery, and client delivery —
+            built for modern photobooth operators and agencies.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               to="/download"
               className="group inline-flex items-center gap-2 rounded-full bg-lemon px-6 py-3.5 text-sm font-bold text-primary-foreground hover:scale-[1.03] transition-transform animate-pulse-glow"
             >
-              <Download className="h-4 w-4" />
-              Download Free Trial
+              Start Free Trial
+              <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/features"
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold hover:text-lemon hover-lift"
             >
-              View Features
-              <ArrowRight className="h-4 w-4" />
+              <CalendarCheck className="h-4 w-4" />
+              Book Demo
             </Link>
           </div>
           <div className="mt-10 flex flex-wrap gap-2">

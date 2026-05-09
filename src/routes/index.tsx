@@ -1,19 +1,31 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { TrustedBy } from "@/components/site/TrustedBy";
-import { WhatIs } from "@/components/site/WhatIs";
-import { ExperienceOverview } from "@/components/site/ExperienceOverview";
-
-import { CoreFeatures } from "@/components/site/CoreFeatures";
-import { Showcase } from "@/components/site/Showcase";
+import { ProblemSection } from "@/components/site/ProblemSection";
+import { BusinessOutcomes } from "@/components/site/BusinessOutcomes";
+import { HowItWorks } from "@/components/site/HowItWorks";
 import { UseCases } from "@/components/site/UseCases";
 import { Customers } from "@/components/site/Customers";
-import { WhyCaptures } from "@/components/site/WhyCaptures";
-import { PricingPreview } from "@/components/site/PricingPreview";
-import { DownloadCta } from "@/components/site/DownloadCta";
+import { FinalCta } from "@/components/site/FinalCta";
 import { FAQ } from "@/components/site/FAQ";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "CAP*TURES — The Operating System for Modern Photobooth Businesses" },
+      {
+        name: "description",
+        content:
+          "Event management, AI experience, instant sharing, live gallery, and client delivery — built for modern photobooth operators and agencies.",
+      },
+      { property: "og:title", content: "CAP*TURES — The Photobooth Business OS" },
+      {
+        property: "og:description",
+        content:
+          "Run your entire photobooth business on one platform. Built for operators, agencies, and event teams.",
+      },
+    ],
+  }),
   component: Index,
 });
 
@@ -22,15 +34,12 @@ function Index() {
     <>
       <Hero />
       <TrustedBy />
-      <WhatIs />
-      <ExperienceOverview />
-      <CoreFeatures />
-      <Showcase />
+      <ProblemSection />
+      <BusinessOutcomes />
+      <HowItWorks />
       <UseCases />
       <Customers />
-      <WhyCaptures />
-      <PricingPreview />
-      <DownloadCta />
+      <FinalCta />
       <FAQ />
     </>
   );
