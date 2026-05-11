@@ -3,12 +3,14 @@ import { Megaphone, CreditCard, Wand2, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
+type Option = { label: string; price: string; note?: string };
 type Module = {
   icon: typeof Megaphone;
   name: string;
   headline: string;
   price: string;
-  features: string[];
+  features?: string[];
+  options?: Option[];
   outcome: string;
   cta: { label: string; to: "/contact" | "/buy" };
   partnerLogo?: { src: string; href: string; alt: string };
