@@ -30,8 +30,11 @@ const modules: Module[] = [
     icon: CreditCard,
     name: "CAP*TURES PAY",
     headline: "Turn every booth into a revenue channel.",
-    price: "+10,000 THB",
-    features: ["QR payment", "Credit card", "Paid event flows", "Instant checkout"],
+    price: "From Free",
+    options: [
+      { label: "ChillPay Partner", price: "Rate 2.9%", note: "Free Integration" },
+      { label: "Other Payment Gateway", price: "Up to 10,000 THB", note: "Custom Integration" },
+    ],
     outcome: "Accept payments directly inside the event experience.",
     cta: { label: "Add to Plan", to: "/buy" },
     partnerLogo: { src: chillpayLogo, href: "https://www.chillpay.co/en/", alt: "ChillPay" },
