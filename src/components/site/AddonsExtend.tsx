@@ -93,14 +93,28 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
               </a>
             )}
 
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex-1">
-              {features.map((f) => (
-                <li key={f} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-orange-impact" />
-                  {f}
-                </li>
-              ))}
-            </ul>
+            {options ? (
+              <ul className="mt-4 space-y-3 text-sm flex-1">
+                {options.map((o) => (
+                  <li key={o.label} className="rounded-xl border border-border/60 bg-background/40 p-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-semibold text-foreground">{o.label}</span>
+                      <span className="text-xs font-bold text-lemon whitespace-nowrap">{o.price}</span>
+                    </div>
+                    {o.note && <div className="mt-1 text-xs text-muted-foreground">{o.note}</div>}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex-1">
+                {features?.map((f) => (
+                  <li key={f} className="flex items-center gap-2">
+                    <span className="h-1 w-1 rounded-full bg-orange-impact" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <p className="mt-5 text-sm font-semibold text-lemon leading-snug">{outcome}</p>
 
