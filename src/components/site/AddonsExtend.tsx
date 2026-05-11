@@ -67,7 +67,7 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
       description="Power-ups for modern event businesses — expand what your booth can do."
     >
       <div className="grid gap-5 md:grid-cols-3">
-        {modules.map(({ icon: Icon, name, headline, price, features, outcome, cta, partnerLogo }) => (
+        {modules.map(({ icon: Icon, name, headline, price, features, options, outcome, cta, partnerLogo }) => (
           <div
             key={name}
             className="group flex flex-col rounded-3xl border border-border bg-card/60 p-7 hover-lift hover:border-orange-impact/40 transition-colors"
