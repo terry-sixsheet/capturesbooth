@@ -3,12 +3,14 @@ import { Megaphone, CreditCard, Wand2, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
+type Option = { label: string; price: string; note?: string };
 type Module = {
   icon: typeof Megaphone;
   name: string;
   headline: string;
   price: string;
-  features: string[];
+  features?: string[];
+  options?: Option[];
   outcome: string;
   cta: { label: string; to: "/contact" | "/buy" };
   partnerLogo?: { src: string; href: string; alt: string };
@@ -28,8 +30,11 @@ const modules: Module[] = [
     icon: CreditCard,
     name: "CAP*TURES PAY",
     headline: "Turn every booth into a revenue channel.",
-    price: "+10,000 THB",
-    features: ["QR payment", "Credit card", "Paid event flows", "Instant checkout"],
+    price: "From Free",
+    options: [
+      { label: "ChillPay Partner", price: "Rate 2.9%", note: "Free Integration" },
+      { label: "Other Payment Gateway", price: "Up to 10,000 THB", note: "Custom Integration" },
+    ],
     outcome: "Accept payments directly inside the event experience.",
     cta: { label: "Add to Plan", to: "/buy" },
     partnerLogo: { src: chillpayLogo, href: "https://www.chillpay.co/en/", alt: "ChillPay" },
@@ -62,7 +67,7 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
       description="Power-ups for modern event businesses — expand what your booth can do."
     >
       <div className="grid gap-5 md:grid-cols-3">
-        {modules.map(({ icon: Icon, name, headline, price, features, outcome, cta, partnerLogo }) => (
+        {modules.map(({ icon: Icon, name, headline, price, features, options, outcome, cta, partnerLogo }) => (
           <div
             key={name}
             className="group flex flex-col rounded-3xl border border-border bg-card/60 p-7 hover-lift hover:border-orange-impact/40 transition-colors"
@@ -88,14 +93,28 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
               </a>
             )}
 
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex-1">
-              {features.map((f) => (
-                <li key={f} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-orange-impact" />
-                  {f}
-                </li>
-              ))}
-            </ul>
+            {options ? (
+              <ul className="mt-4 space-y-3 text-sm flex-1">
+                {options.map((o) => (
+                  <li key={o.label} className="rounded-xl border border-border/60 bg-background/40 p-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-semibold text-foreground">{o.label}</span>
+                      <span className="text-xs font-bold text-lemon whitespace-nowrap">{o.price}</span>
+                    </div>
+                    {o.note && <div className="mt-1 text-xs text-muted-foreground">{o.note}</div>}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex-1">
+                {features?.map((f) => (
+                  <li key={f} className="flex items-center gap-2">
+                    <span className="h-1 w-1 rounded-full bg-orange-impact" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <p className="mt-5 text-sm font-semibold text-lemon leading-snug">{outcome}</p>
 
