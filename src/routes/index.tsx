@@ -40,7 +40,6 @@ function Index() {
       <UseCases />
       <Customers />
       <FinalCta />
-      <FAQ />
     </>
   );
 }
