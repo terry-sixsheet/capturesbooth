@@ -52,7 +52,7 @@ export function PricingPreview() {
       description="A growth journey for modern event experience businesses — not just another pricing page."
       align="center"
     >
-      <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {/* START */}
         <div className="relative rounded-3xl p-8 hover-lift glass flex flex-col">
           <div className="flex items-center gap-2">
