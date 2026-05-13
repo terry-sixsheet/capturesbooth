@@ -21,7 +21,7 @@ function FeaturesPage() {
   return (
     <>
       <CoreFeatures />
-      <AddonsExtend showPrice={false} />
+      
       <ExperienceFlow />
       <DownloadCta />
     </>
