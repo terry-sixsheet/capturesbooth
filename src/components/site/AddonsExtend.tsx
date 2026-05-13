@@ -39,24 +39,6 @@ const modules: Module[] = [
     cta: { label: "Add to Plan", to: "/buy" },
     partnerLogo: { src: chillpayLogo, href: "https://www.chillpay.co/en/", alt: "ChillPay" },
   },
-  {
-    icon: Wand2,
-    name: "Custom Experience Studio",
-    headline: "Build fully branded interactive experiences.",
-    price: "Custom",
-    features: [
-      "Custom event flow",
-      "CRM integration",
-      "Registration system",
-      "Gamification",
-      "Live gallery",
-      "Vending integration",
-      "Custom layouts",
-      "Advanced interaction logic",
-    ],
-    outcome: "Create unforgettable premium experiences for brands and clients.",
-    cta: { label: "Book Consultation", to: "/contact" },
-  },
 ];
 
 export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
