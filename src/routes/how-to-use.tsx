@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { PlayCircle, FileText, BookOpen, ArrowUpRight } from "lucide-react";
+import { FileText, BookOpen, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/how-to-use")({
   head: () => ({
@@ -56,9 +56,15 @@ function HowTo() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {tutorials.map((t) => (
             <div key={t.title} className="group rounded-3xl glass overflow-hidden hover-lift hover:border-lemon/30">
-              <div className="aspect-video relative grid place-items-center bg-gradient-to-br from-lemon/15 via-card to-orange-impact/10">
-                <PlayCircle className="h-14 w-14 text-lemon group-hover:scale-110 transition-transform" />
-                <span className="absolute bottom-3 right-3 rounded-full bg-background/80 px-2 py-1 text-[10px] font-bold">{t.time}</span>
+              <div className="aspect-video relative bg-black">
+                <iframe
+                  src="https://www.youtube.com/embed/6lmCiC0IU1Y"
+                  title={t.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
               </div>
               <div className="p-5">
                 <h3 className="font-display text-lg font-bold">{t.title}</h3>
