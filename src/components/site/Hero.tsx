@@ -16,9 +16,9 @@ export function Hero() {
             The Photobooth Business OS
           </span>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black leading-[0.95] tracking-tight text-balance">
-            The Operating System for
+            Modern Photobooth
             <br />
-            <span className="text-gradient-lemon">Modern Photobooth Businesses.</span>
+            <span className="text-gradient-lemon">Software for Business</span>
           </h1>
           <p className="mt-7 max-w-xl text-lg text-muted-foreground text-pretty">
             Event management, AI experience, instant sharing, live gallery, and client delivery —
