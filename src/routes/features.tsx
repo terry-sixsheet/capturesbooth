@@ -20,12 +20,6 @@ export const Route = createFileRoute("/features")({
 function FeaturesPage() {
   return (
     <>
-      <Section
-        eyebrow="Features"
-        title={<>One platform. <span className="text-lemon">Every capability.</span></>}
-        description="From event creation to instant sharing — explore everything CAP*TURES brings to your floor."
-        align="center"
-      />
       <CoreFeatures />
       <AddonsExtend showPrice={false} />
       <ExperienceFlow />
