@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Megaphone, CreditCard, Wand2, ArrowRight } from "lucide-react";
+import { Megaphone, CreditCard, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
@@ -39,24 +39,6 @@ const modules: Module[] = [
     cta: { label: "Add to Plan", to: "/buy" },
     partnerLogo: { src: chillpayLogo, href: "https://www.chillpay.co/en/", alt: "ChillPay" },
   },
-  {
-    icon: Wand2,
-    name: "Custom Experience Studio",
-    headline: "Build fully branded interactive experiences.",
-    price: "Custom",
-    features: [
-      "Custom event flow",
-      "CRM integration",
-      "Registration system",
-      "Gamification",
-      "Live gallery",
-      "Vending integration",
-      "Custom layouts",
-      "Advanced interaction logic",
-    ],
-    outcome: "Create unforgettable premium experiences for brands and clients.",
-    cta: { label: "Book Consultation", to: "/contact" },
-  },
 ];
 
 export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
@@ -66,7 +48,7 @@ export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
       title={<>Scale Your <span className="text-orange-impact">Experience</span></>}
       description="Power-ups for modern event businesses — expand what your booth can do."
     >
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2">
         {modules.map(({ icon: Icon, name, headline, price, features, options, outcome, cta, partnerLogo }) => (
           <div
             key={name}
