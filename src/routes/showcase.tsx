@@ -15,11 +15,6 @@ export const Route = createFileRoute("/showcase")({
   }),
   component: () => (
     <>
-      <Section
-        eyebrow="Showcase"
-        title={<>Real software. <span className="text-lemon">Real events.</span></>}
-        align="center"
-      />
       <Showcase />
       <Section
         eyebrow="Use Cases"
