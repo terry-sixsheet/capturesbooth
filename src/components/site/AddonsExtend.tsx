@@ -33,7 +33,7 @@ const modules: Module[] = [
     price: "From Free",
     options: [
       { label: "ChillPay Partner", price: "Rate 2.9%", note: "Free Integration" },
-      { label: "Other Payment Gateway", price: "Up to 10,000 THB", note: "Custom Integration" },
+      { label: "Other Payment Gateway", price: "Upon Requirement", note: "Custom Integration" },
     ],
     outcome: "Accept payments directly inside the event experience.",
     cta: { label: "Add to Plan", to: "/buy" },
