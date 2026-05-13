@@ -17,7 +17,7 @@ export function Footer() {
           <p className="mt-3 text-sm text-muted-foreground">
             by{" "}
             <a
-              href="http://www.sixsheet.me"
+              href="http://www.sixsheet.co"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-foreground hover:text-lemon transition-colors"
