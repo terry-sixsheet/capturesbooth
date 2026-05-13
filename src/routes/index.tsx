@@ -7,7 +7,6 @@ import { HowItWorks } from "@/components/site/HowItWorks";
 import { UseCases } from "@/components/site/UseCases";
 import { Customers } from "@/components/site/Customers";
 import { FinalCta } from "@/components/site/FinalCta";
-import { FAQ } from "@/components/site/FAQ";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +39,6 @@ function Index() {
       <UseCases />
       <Customers />
       <FinalCta />
-      <FAQ />
     </>
   );
 }
