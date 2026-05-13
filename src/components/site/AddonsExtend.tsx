@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Megaphone, CreditCard, Wand2, ArrowRight } from "lucide-react";
+import { Megaphone, CreditCard, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
