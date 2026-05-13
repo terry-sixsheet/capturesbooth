@@ -31,6 +31,16 @@ const growFeatures = [
   "Cloud sharing",
 ];
 
+const enterpriseFeatures = [
+  "Everything in GROW",
+  "Unlimited events & captures",
+  "Full custom experiences",
+  "Custom integrations & API",
+  "Dedicated account manager",
+  "Priority onsite support",
+  "SLA & enterprise security",
+];
+
 export function PricingPreview() {
   const [cycle, setCycle] = useState<BillingCycle>("year");
   const grow = growPricing[cycle];
