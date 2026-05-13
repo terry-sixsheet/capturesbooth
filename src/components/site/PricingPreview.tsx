@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Section } from "./Section";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Check, ArrowRight, Sparkles, Crown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 type BillingCycle = "week" | "month" | "year";
@@ -31,6 +31,16 @@ const growFeatures = [
   "Cloud sharing",
 ];
 
+const enterpriseFeatures = [
+  "Everything in GROW",
+  "Unlimited events & captures",
+  "Full custom experiences",
+  "Custom integrations & API",
+  "Dedicated account manager",
+  "Priority onsite support",
+  "SLA & enterprise security",
+];
+
 export function PricingPreview() {
   const [cycle, setCycle] = useState<BillingCycle>("year");
   const grow = growPricing[cycle];
@@ -42,7 +52,7 @@ export function PricingPreview() {
       description="A growth journey for modern event experience businesses — not just another pricing page."
       align="center"
     >
-      <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {/* START */}
         <div className="relative rounded-3xl p-8 hover-lift glass flex flex-col">
           <div className="flex items-center gap-2">
@@ -136,6 +146,45 @@ export function PricingPreview() {
             className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-transform hover:scale-[1.02] bg-lemon text-primary-foreground"
           >
             Start Growing
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        {/* ENTERPRISE */}
+        <div className="relative rounded-3xl p-8 hover-lift glass border border-border flex flex-col">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+              <Crown className="h-3 w-3" />
+              Stage 3 · Enterprise
+            </span>
+          </div>
+          <h3 className="mt-4 font-display text-3xl font-bold">Scale without limits — fully tailored.</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            For brands, agencies, and large operators that need unlimited usage and full customization.
+          </p>
+
+          <div className="mt-6 flex items-baseline gap-2">
+            <span className="font-display text-5xl font-black">Custom</span>
+            <span className="text-muted-foreground">talk to sales</span>
+          </div>
+          <div className="mt-1 text-xs text-muted-foreground">Tailored to your business and event volume</div>
+
+          <ul className="mt-6 space-y-3 text-sm flex-1">
+            {enterpriseFeatures.map((it) => (
+              <li key={it} className="flex items-start gap-3">
+                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-muted text-foreground">
+                  <Check className="h-3 w-3" />
+                </span>
+                <span className="text-foreground/90">{it}</span>
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            to="/contact"
+            className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-transform hover:scale-[1.02] border border-border hover:border-lemon hover:text-lemon"
+          >
+            Contact Sales
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
