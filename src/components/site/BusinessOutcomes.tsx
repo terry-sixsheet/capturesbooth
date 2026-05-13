@@ -10,8 +10,8 @@ const groups = [
     items: [
       { name: "Live Gallery", body: "A real-time wall guests can't stop watching." },
       { name: "Instant Sharing", body: "Guests receive and share photos in seconds." },
-      { name: "AI Experience", body: "Smart effects that feel personal and premium." },
-      { name: "Guest Engagement", body: "Interactive flows that drive social reach." },
+      { name: "Customize UX/UI for your Brand", body: "Tailor every screen and touchpoint to match your brand identity." },
+      { name: "Frame Design — Print, GIF, Video", body: "Design branded outputs across every format guests love to share." },
     ],
   },
   {
@@ -21,9 +21,9 @@ const groups = [
     body: "Plan events, manage clients, and coordinate teams without juggling spreadsheets and chat threads.",
     items: [
       { name: "Event Dashboard", body: "Every event, every status — at a glance." },
-      { name: "Client Management", body: "Briefs, assets, and delivery in one place." },
+      { name: "Integration", body: "Connect Payment, CRM, and your legacy systems seamlessly." },
       { name: "Multi-event Control", body: "Run dozens of activations in parallel." },
-      { name: "Team Workflow", body: "Roles, handoffs, and ops without friction." },
+      { name: "Realtime Monitor", body: "Live visibility into every booth, team, and event in motion." },
     ],
   },
   {
