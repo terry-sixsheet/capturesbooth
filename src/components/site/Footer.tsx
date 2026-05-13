@@ -7,10 +7,23 @@ export function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="container-max py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Logo />
+          <a href="http://www.captures.photo" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+            <Logo />
+          </a>
           <p className="mt-4 max-w-sm text-muted-foreground">
             Capture Moments. Create Impact. The modern photo booth platform built for events, weddings,
             activations, and experience businesses.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            by{" "}
+            <a
+              href="http://www.sixsheet.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground hover:text-lemon transition-colors"
+            >
+              SIXSHEET Company
+            </a>
           </p>
           <div className="mt-6 flex gap-3">
             {[
