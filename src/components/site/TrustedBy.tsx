@@ -1,10 +1,16 @@
-const logos = ["SIXSHEET", "ANDY&FINE", "POSE OFFICE PHUKET", "BACC MARKET", "EXPERIENCE LAB", "STUDIO 88"];
+const logos = [
+  "CAP*TURES PHOTOBOOTH SOLUTION",
+  "ANDY & FINE — PHOTOHOUSE",
+  "POSE OFFICE (PHUKET)",
+  "CAP*TURES (LAOS)",
+  "TRUE ALPHA HUB x SUCH A SMALL WORLD",
+];
 
 const metrics = [
   { value: "1,200+", label: "Events powered" },
   { value: "2.4M+", label: "Photos delivered" },
-  { value: "12", label: "Countries supported" },
-  { value: "80+", label: "Agencies & studios" },
+  { value: "2", label: "Countries supported" },
+  { value: "80+", label: "Locations hosted" },
 ];
 
 export function TrustedBy() {
