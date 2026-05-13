@@ -55,10 +55,20 @@ export function BusinessOutcomes() {
       align="center"
     >
       <div className="space-y-8">
-        {groups.map(({ icon: Icon, tag, title, body, items }) => (
+        {groups.map(({ icon: Icon, image, tag, title, body, items }) => (
           <div key={tag} className="rounded-3xl glass p-8 sm:p-10 hover-lift">
             <div className="grid lg:grid-cols-[1.1fr_2fr] gap-10">
               <div>
+                <div className="overflow-hidden rounded-2xl border border-border mb-6 aspect-[4/3]">
+                  <img
+                    src={image}
+                    alt={tag}
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-lemon/10 px-3 py-1 text-xs uppercase tracking-[0.22em] text-lemon">
                   <Icon className="h-3.5 w-3.5" />
                   {tag}
