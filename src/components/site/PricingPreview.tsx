@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Section } from "./Section";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Check, ArrowRight, Sparkles, Crown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 type BillingCycle = "week" | "month" | "year";
