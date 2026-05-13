@@ -187,7 +187,7 @@ const categories: {
   {
     icon: Briefcase,
     title: "Business Tools",
-    items: ["Multi-event mgmt", "Cloud sharing", "Team operations", "Analytics (soon)"],
+    items: ["Multi-event management", "Online gallery", "QR sharing", "Cloud sharing Gallery"],
     mock: <MockBusiness />,
   },
 ];
