@@ -1,13 +1,9 @@
 import { Section } from "./Section";
 import { Sparkles, Briefcase, TrendingUp } from "lucide-react";
-import outcomeEvent from "@/assets/outcome-event.jpg";
-import outcomeOperations from "@/assets/outcome-operations.jpg";
-import outcomeGrowth from "@/assets/outcome-growth.jpg";
 
 const groups = [
   {
     icon: Sparkles,
-    image: outcomeEvent,
     tag: "Event Experience",
     title: "Turn every event into a branded interactive moment.",
     body: "Live galleries, AI experiences, and instant sharing keep guests engaged long after the booth closes.",
@@ -20,7 +16,6 @@ const groups = [
   },
   {
     icon: Briefcase,
-    image: outcomeOperations,
     tag: "Business Operations",
     title: "Run your entire studio from a single dashboard.",
     body: "Plan events, manage clients, and coordinate teams without juggling spreadsheets and chat threads.",
@@ -33,7 +28,6 @@ const groups = [
   },
   {
     icon: TrendingUp,
-    image: outcomeGrowth,
     tag: "Growth & Branding",
     title: "Grow into an experience business — not just a booth.",
     body: "Branding, lead capture, and analytics turn every event into measurable business value.",
@@ -55,20 +49,10 @@ export function BusinessOutcomes() {
       align="center"
     >
       <div className="space-y-8">
-        {groups.map(({ icon: Icon, image, tag, title, body, items }) => (
+        {groups.map(({ icon: Icon, tag, title, body, items }) => (
           <div key={tag} className="rounded-3xl glass p-8 sm:p-10 hover-lift">
             <div className="grid lg:grid-cols-[1.1fr_2fr] gap-10">
               <div>
-                <div className="overflow-hidden rounded-2xl border border-border mb-6 aspect-[4/3]">
-                  <img
-                    src={image}
-                    alt={tag}
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-lemon/10 px-3 py-1 text-xs uppercase tracking-[0.22em] text-lemon">
                   <Icon className="h-3.5 w-3.5" />
                   {tag}
