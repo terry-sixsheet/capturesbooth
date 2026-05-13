@@ -4,7 +4,6 @@ import { ComparePlans } from "@/components/site/ComparePlans";
 import { AddonsExtend } from "@/components/site/AddonsExtend";
 import { ExperienceOverview } from "@/components/site/ExperienceOverview";
 import { FAQ } from "@/components/site/FAQ";
-import { Section } from "@/components/site/Section";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -17,12 +16,6 @@ export const Route = createFileRoute("/pricing")({
   }),
   component: () => (
     <>
-      <Section
-        eyebrow="Pricing"
-        title={<>Capture moments. <span className="text-lemon">Create impact.</span></>}
-        description="A simple growth journey: Start free, grow your business, scale your experience."
-        align="center"
-      />
       <ExperienceOverview />
       <PricingPreview />
       <ComparePlans />
