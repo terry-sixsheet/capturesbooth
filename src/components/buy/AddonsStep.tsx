@@ -33,7 +33,7 @@ export function AddonsStep({
         <p className="mt-2 text-sm text-muted-foreground">Power-ups for serious operators — add only what you need.</p>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {ADDONS.map((a) => {
           const on = selected.includes(a.id);
           return (
@@ -51,9 +51,9 @@ export function AddonsStep({
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-orange-impact/15 text-orange-impact">
                   {on ? <Check className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
                 </div>
-                <span className="text-xs font-bold text-lemon">
-                  {typeof a.price === "number" ? `+฿${a.price.toLocaleString()}` : "Custom"}
-                </span>
+                {typeof a.price === "number" && (
+                  <span className="text-xs font-bold text-lemon">+฿{a.price.toLocaleString()}</span>
+                )}
               </div>
               <h4 className="mt-5 font-display text-xl font-bold">{a.title}</h4>
               {a.note && <div className="mt-1 text-xs text-muted-foreground">{a.note}</div>}
