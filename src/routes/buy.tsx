@@ -71,6 +71,8 @@ function BuyPage() {
             cycle={state.cycle}
             selected={state.addons}
             onToggle={toggleAddon}
+            notes={state.notes}
+            onNotesChange={(notes) => setState({ ...state, notes })}
             onBack={() => setStep(1)}
             onNext={() => setStep(3)}
           />
