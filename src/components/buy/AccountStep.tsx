@@ -68,7 +68,6 @@ export function AccountStep({
           </div>
           <Field label="Phone" type="tel" value={account.phone} onChange={set("phone")} placeholder="+66 ..." required />
         </div>
-        </div>
 
         <div className="mt-8 flex items-center justify-between gap-3">
           <button className="text-sm text-muted-foreground hover:text-foreground transition-colors">
