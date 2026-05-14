@@ -8,7 +8,7 @@ export const PLAN_PRICING: Record<BillingCycle, { price: number; label: string; 
   year: { price: 5900, label: "1 Year", bestFor: "Best value", badge: "Save 80%" },
 };
 
-export const ADDONS: { id: AddonId; title: string; price: number | "custom"; note?: string; items: string[] }[] = [
+export const ADDONS: { id: AddonId; title: string; price: number | "custom" | null; note?: string; items: string[] }[] = [
   {
     id: "coupon",
     title: "Promotion Engine",
@@ -18,15 +18,9 @@ export const ADDONS: { id: AddonId; title: string; price: number | "custom"; not
   {
     id: "payment",
     title: "CAP*TURES PAY",
-    price: 10000,
-    note: "Partnered with Chillpay",
+    price: null,
+    note: "After Sales option",
     items: ["QR payment", "Credit card", "Paid event flows", "Instant checkout"],
-  },
-  {
-    id: "branding",
-    title: "Custom Experience Studio",
-    price: "custom",
-    items: ["Custom event flow", "CRM & registration", "Gamification & live gallery", "Advanced interaction logic"],
   },
 ];
 
@@ -36,18 +30,19 @@ export type Account = {
   email: string;
   password: string;
   confirm: string;
-  phone?: string;
-  social?: string;
+  phone: string;
 };
 
 export type BuyState = {
   account: Account;
   cycle: BillingCycle;
   addons: AddonId[];
+  notes: string;
 };
 
 export const DEFAULT_STATE: BuyState = {
-  account: { fullName: "", company: "", email: "", password: "", confirm: "", phone: "", social: "" },
+  account: { fullName: "", company: "", email: "", password: "", confirm: "", phone: "" },
   cycle: "year",
   addons: [],
+  notes: "",
 };
