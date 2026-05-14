@@ -24,6 +24,22 @@ export const Route = createFileRoute("/")({
           "Run your entire photobooth business on one platform. Built for operators, agencies, and event teams.",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "CAP*TURES",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Windows, macOS",
+          description:
+            "The operating system for modern photobooth businesses — multi-event management, AI experiences, online gallery, QR sharing, and cloud delivery.",
+          url: "https://capturesbooth.lovable.app",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "THB" },
+        }),
+      },
+    ],
   }),
   component: Index,
 });

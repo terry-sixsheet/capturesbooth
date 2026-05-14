@@ -10,6 +10,32 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Talk to our photobooth experts about pricing, custom builds, partnerships, or support." },
       { property: "og:title", content: "Talk to our Expert — CAP*TURES" },
       { property: "og:description", content: "We'd love to hear about your event." },
+      { property: "og:url", content: "https://capturesbooth.lovable.app/contact" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://capturesbooth.lovable.app/contact" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "CAP*TURES by SIXSHEET Company",
+          url: "https://capturesbooth.lovable.app",
+          email: "photoboothexpert@sixsheet.me",
+          telephone: "+66-80-268-6632",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "33 Soi Pradipat 17, Pradipat Road",
+            addressLocality: "Samsennai, Phayathai",
+            addressRegion: "Bangkok",
+            postalCode: "10400",
+            addressCountry: "TH",
+          },
+          openingHours: "Mo-Sa 09:00-19:00",
+        }),
+      },
     ],
   }),
   component: Contact,
