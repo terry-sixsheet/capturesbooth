@@ -33,7 +33,7 @@ export function TrustedBy() {
             {[...logos, ...logos].map((logo, i) => (
               <span
                 key={i}
-                className="font-display text-2xl font-black tracking-widest text-muted-foreground/70 hover:text-lemon transition-colors whitespace-nowrap"
+                className="font-display text-2xl font-black tracking-widest text-muted-foreground hover:text-lemon transition-colors whitespace-nowrap"
               >
                 {logo}
               </span>
