@@ -24,7 +24,7 @@ function CellView({ value, accent }: { value: Cell; accent?: boolean }) {
     );
   if (value === false)
     return (
-      <span className="inline-grid h-6 w-6 place-items-center rounded-full bg-muted/40 text-muted-foreground/60">
+      <span className="inline-grid h-6 w-6 place-items-center rounded-full bg-muted/40 text-muted-foreground">
         <Minus className="h-3.5 w-3.5" />
       </span>
     );
