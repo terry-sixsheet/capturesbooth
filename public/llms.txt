@@ -1,0 +1,20 @@
+# CAP*TURES
+
+> The operating system for modern photobooth businesses — event management, AI experiences, instant sharing, live galleries, and client delivery in one platform.
+
+CAP*TURES is built for photobooth operators, agencies, and event teams who run weddings, activations, and brand experiences. It combines multi-event management, online and cloud sharing galleries, QR sharing, AI-powered effects (including cutout), and a payment layer (CAP*TURE PAY) into a single product.
+
+## Pages
+
+- [Home](/): Overview of CAP*TURES, outcomes, how it works, and use cases.
+- [Features](/features): Core features including multi-event management, online gallery, QR sharing, cloud sharing gallery, and scale-your-experience tools like Cutout.
+- [Pricing](/pricing): Plans, add-ons, CAP*TURE PAY payment options, and the Scale Your Experience section.
+- [How to Use](/how-to-use): Video walkthroughs and step-by-step guides for operators.
+- [Showcase](/showcase): Customer events and example experiences built on CAP*TURES.
+- [Download](/download): Get the CAP*TURES app for your booth hardware.
+- [Buy](/buy): Configure a plan and add-ons to purchase.
+- [Contact](/contact): Get in touch with the CAP*TURES team.
+
+## Optional
+
+- [SIXSHEET Company](http://www.sixsheet.co): Parent company behind CAP*TURES.
