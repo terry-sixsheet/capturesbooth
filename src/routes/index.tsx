@@ -11,7 +11,7 @@ import { FinalCta } from "@/components/site/FinalCta";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CAP*TURES — The Operating System for Modern Photobooth Businesses" },
+      { title: "CAP*TURES — The Photobooth Business OS" },
       {
         name: "description",
         content:
