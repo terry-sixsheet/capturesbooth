@@ -66,10 +66,8 @@ export function AccountStep({
             <Field label="Password" type="password" value={account.password} onChange={set("password")} placeholder="••••••••" />
             <Field label="Confirm password" type="password" value={account.confirm} onChange={set("confirm")} placeholder="••••••••" />
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Phone (optional)" value={account.phone || ""} onChange={set("phone")} placeholder="+66 ..." />
-            <Field label="Instagram (optional)" value={account.social || ""} onChange={set("social")} placeholder="@yourstudio" />
-          </div>
+          <Field label="Phone" type="tel" value={account.phone} onChange={set("phone")} placeholder="+66 ..." required />
+        </div>
         </div>
 
         <div className="mt-8 flex items-center justify-between gap-3">
