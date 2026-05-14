@@ -13,6 +13,7 @@ export function AccountStep({
   const valid =
     account.fullName.trim() &&
     account.email.includes("@") &&
+    account.phone.trim().length >= 6 &&
     account.password.length >= 6 &&
     account.password === account.confirm;
 
