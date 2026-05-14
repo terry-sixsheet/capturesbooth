@@ -17,7 +17,7 @@ export const ADDONS: { id: AddonId; title: string; price: number | "custom" | nu
   },
   {
     id: "payment",
-    title: "CAP*TURES PAY",
+    title: "Specific Payment Customization",
     price: null,
     note: "After Sales option",
     items: ["QR payment", "Credit card", "Paid event flows", "Instant checkout"],
