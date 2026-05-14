@@ -70,6 +70,20 @@ export function AddonsStep({
         })}
       </div>
 
+      <div className="mt-8 rounded-2xl border border-border bg-card/40 p-5">
+        <label className="block">
+          <span className="text-xs uppercase tracking-wider text-muted-foreground">Additional requirements</span>
+          <textarea
+            value={notes}
+            onChange={(e) => onNotesChange(e.target.value)}
+            rows={4}
+            maxLength={1000}
+            placeholder="Tell us about any custom flow, branding, integrations or special requests…"
+            className="mt-2 w-full rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors focus:border-orange-impact focus:bg-background resize-none"
+          />
+        </label>
+      </div>
+
       {/* Live total */}
       <div className="mt-10 rounded-2xl border border-lemon/30 bg-card/60 p-5 flex items-center justify-between">
         <div>
