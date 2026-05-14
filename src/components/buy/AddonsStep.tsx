@@ -6,12 +6,16 @@ export function AddonsStep({
   cycle,
   selected,
   onToggle,
+  notes,
+  onNotesChange,
   onNext,
   onBack,
 }: {
   cycle: BillingCycle;
   selected: AddonId[];
   onToggle: (id: AddonId) => void;
+  notes: string;
+  onNotesChange: (v: string) => void;
   onNext: () => void;
   onBack: () => void;
 }) {
@@ -29,7 +33,7 @@ export function AddonsStep({
         <p className="mt-2 text-sm text-muted-foreground">Power-ups for serious operators — add only what you need.</p>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {ADDONS.map((a) => {
           const on = selected.includes(a.id);
           return (
@@ -47,9 +51,9 @@ export function AddonsStep({
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-orange-impact/15 text-orange-impact">
                   {on ? <Check className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
                 </div>
-                <span className="text-xs font-bold text-lemon">
-                  {typeof a.price === "number" ? `+฿${a.price.toLocaleString()}` : "Custom"}
-                </span>
+                {typeof a.price === "number" && (
+                  <span className="text-xs font-bold text-lemon">+฿{a.price.toLocaleString()}</span>
+                )}
               </div>
               <h4 className="mt-5 font-display text-xl font-bold">{a.title}</h4>
               {a.note && <div className="mt-1 text-xs text-muted-foreground">{a.note}</div>}
@@ -64,6 +68,20 @@ export function AddonsStep({
             </button>
           );
         })}
+      </div>
+
+      <div className="mt-8 rounded-2xl border border-border bg-card/40 p-5">
+        <label className="block">
+          <span className="text-xs uppercase tracking-wider text-muted-foreground">Additional requirements</span>
+          <textarea
+            value={notes}
+            onChange={(e) => onNotesChange(e.target.value)}
+            rows={4}
+            maxLength={1000}
+            placeholder="Tell us about any custom flow, branding, integrations or special requests…"
+            className="mt-2 w-full rounded-xl border border-border bg-background/50 px-4 py-3 text-sm outline-none transition-colors focus:border-orange-impact focus:bg-background resize-none"
+          />
+        </label>
       </div>
 
       {/* Live total */}
