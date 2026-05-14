@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://capturesbooth.lovable.app/sitemap.xml
