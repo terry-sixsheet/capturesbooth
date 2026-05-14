@@ -17,6 +17,12 @@ export const Route = createFileRoute("/buy")({
     meta: [
       { title: "Get CAP*TURES — Onboarding" },
       { name: "description", content: "Create your account, choose a plan, and activate your CAP*TURES license." },
+      { property: "og:title", content: "Get CAP*TURES — Create Your Account & Activate" },
+      { property: "og:description", content: "Sign up, pick a plan, add the features you need, and launch your CAP*TURES booth in minutes." },
+      { property: "og:url", content: "https://capturesbooth.lovable.app/buy" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://capturesbooth.lovable.app/buy" },
     ],
   }),
   component: BuyPage,
