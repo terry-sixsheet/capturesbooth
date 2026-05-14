@@ -6,12 +6,16 @@ export function AddonsStep({
   cycle,
   selected,
   onToggle,
+  notes,
+  onNotesChange,
   onNext,
   onBack,
 }: {
   cycle: BillingCycle;
   selected: AddonId[];
   onToggle: (id: AddonId) => void;
+  notes: string;
+  onNotesChange: (v: string) => void;
   onNext: () => void;
   onBack: () => void;
 }) {
