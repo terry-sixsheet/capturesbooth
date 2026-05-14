@@ -1,6 +1,6 @@
 export type BillingCycle = "week" | "month" | "year";
 
-export type AddonId = "coupon" | "payment" | "branding";
+export type AddonId = "coupon" | "payment";
 
 export const PLAN_PRICING: Record<BillingCycle, { price: number; label: string; bestFor: string; badge?: string }> = {
   week: { price: 1500, label: "1 Week", bestFor: "One-off events" },
