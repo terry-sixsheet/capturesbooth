@@ -44,6 +44,14 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <a
+            href="https://portal.captures.photo/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            Sign In
+          </a>
           <Link
             to="/download"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-lemon px-4 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform animate-pulse-glow"
