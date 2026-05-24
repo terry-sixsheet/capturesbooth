@@ -15,14 +15,14 @@ export const Route = createFileRoute("/download")({
 });
 
 const requirements = [
-  { icon: Cpu, label: "CPU", value: "Intel Core i7-12700H / 13620H or AMD Ryzen 7 6800H / 7735HS (8C/16T or better)" },
-  { icon: MemoryStick, label: "RAM", value: "16 GB DDR4/DDR5" },
-  { icon: HardDrive, label: "Storage", value: "512 GB NVMe Gen3 (TLC only — no QLC)" },
-  { icon: Gpu, label: "GPU", value: "Integrated (Iris Xe / Radeon 680M)" },
-  { icon: Monitor, label: "Display", value: "15.6\" 1920×1080" },
-  { icon: Usb, label: "Ports", value: "2× USB-A + 1× USB-C, GbE or USB-Ethernet adapter" },
-  { icon: Fan, label: "Cooling / PSU", value: "Dual-fan chassis, ≥150 W charger" },
-  { icon: Camera, label: "OS", value: "Windows 11 Home/Pro x64" },
+  { icon: Cpu, label: "Processor", value: "Intel Core i7 or AMD Ryzen 7 (8 cores or newer)" },
+  { icon: MemoryStick, label: "Memory", value: "16 GB RAM" },
+  { icon: HardDrive, label: "Storage", value: "512 GB SSD" },
+  { icon: Gpu, label: "Graphics", value: "Built-in graphics (Intel Iris Xe or AMD Radeon)" },
+  { icon: Monitor, label: "Screen", value: '15.6" Full HD (1920×1080)' },
+  { icon: Usb, label: "Connections", value: "2 USB-A + 1 USB-C, plus wired internet" },
+  { icon: Fan, label: "Power & Cooling", value: "Dual-fan laptop with 150W charger" },
+  { icon: Camera, label: "Operating System", value: "Windows 11 (64-bit)" },
 ];
 
 const changelog = [
