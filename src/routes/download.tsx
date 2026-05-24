@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Download, Cpu, HardDrive, Monitor, Camera } from "lucide-react";
+import { Download, Cpu, HardDrive, Monitor, Camera, MemoryStick, Gpu, Usb, Fan } from "lucide-react";
 
 export const Route = createFileRoute("/download")({
   head: () => ({
@@ -15,10 +15,14 @@ export const Route = createFileRoute("/download")({
 });
 
 const requirements = [
-  { icon: Monitor, label: "OS", value: "Windows 10 / 11 (64-bit)" },
-  { icon: Cpu, label: "CPU", value: "Intel i5 / Ryzen 5 or better" },
-  { icon: HardDrive, label: "Storage", value: "2 GB free disk space" },
-  { icon: Camera, label: "Camera", value: "Canon DSLR or USB Webcam" },
+  { icon: Cpu, label: "CPU", value: "Intel Core i7-12700H / 13620H or AMD Ryzen 7 6800H / 7735HS (8C/16T or better)" },
+  { icon: MemoryStick, label: "RAM", value: "16 GB DDR4/DDR5" },
+  { icon: HardDrive, label: "Storage", value: "512 GB NVMe Gen3 (TLC only — no QLC)" },
+  { icon: Gpu, label: "GPU", value: "Integrated (Iris Xe / Radeon 680M)" },
+  { icon: Monitor, label: "Display", value: "15.6\" 1920×1080" },
+  { icon: Usb, label: "Ports", value: "2× USB-A + 1× USB-C, GbE or USB-Ethernet adapter" },
+  { icon: Fan, label: "Cooling / PSU", value: "Dual-fan chassis, ≥150 W charger" },
+  { icon: Camera, label: "OS", value: "Windows 11 Home/Pro x64" },
 ];
 
 const changelog = [
