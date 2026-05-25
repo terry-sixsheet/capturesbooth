@@ -2,12 +2,14 @@ import { Check, Minus, Plus } from "lucide-react";
 import { type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
 
 const FEATURES = [
-  "Multi-event support",
-  "Online gallery + QR sharing",
-  "Printing system",
-  "GIF / video capture",
-  "Creative tools",
-  "Business analytics",
+  "Everything in START",
+  "Live photo captures",
+  "QR sharing and online gallery",
+  "Filter features",
+  "Sticker features",
+  "Advanced configuration for Pro (see Manual)",
+  "Import & export events template",
+  "2 connected machines per license",
 ];
 
 export function PlanStep({
