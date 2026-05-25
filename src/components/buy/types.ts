@@ -30,6 +30,12 @@ export const ADDONS: { id: AddonId; title: string; price: number | "custom" | nu
     items: ["Multi-printer queue", "Layout per printer", "Print routing rules", "High-volume support"],
   },
   {
+    id: "aiphotobooth",
+    title: "AI Photobooth",
+    price: 3000,
+    items: ["AI background replacement", "Smart portrait enhancement", "AI filters & style transfer", "Real-time face effects"],
+  },
+  {
     id: "payment",
     title: "Payment Integration",
     price: null,
