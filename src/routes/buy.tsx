@@ -62,6 +62,8 @@ function BuyPage() {
           <PlanStep
             cycle={state.cycle}
             onChange={(cycle) => setState({ ...state, cycle })}
+            quantity={state.quantity}
+            onQuantityChange={(quantity) => setState({ ...state, quantity })}
             onBack={() => setStep(0)}
             onNext={() => setStep(2)}
           />
@@ -69,6 +71,7 @@ function BuyPage() {
         {step === 2 && (
           <AddonsStep
             cycle={state.cycle}
+            quantity={state.quantity}
             selected={state.addons}
             onToggle={toggleAddon}
             notes={state.notes}

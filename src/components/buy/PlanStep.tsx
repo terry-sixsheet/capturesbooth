@@ -1,5 +1,5 @@
-import { Check } from "lucide-react";
-import { type BillingCycle, PLAN_PRICING } from "./types";
+import { Check, Minus, Plus } from "lucide-react";
+import { type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
 
 const FEATURES = [
   "Multi-event support",
@@ -13,19 +13,27 @@ const FEATURES = [
 export function PlanStep({
   cycle,
   onChange,
+  quantity,
+  onQuantityChange,
   onNext,
   onBack,
 }: {
   cycle: BillingCycle;
   onChange: (c: BillingCycle) => void;
+  quantity: number;
+  onQuantityChange: (q: number) => void;
   onNext: () => void;
   onBack: () => void;
 }) {
+  const machines = quantity * MACHINES_PER_LICENSE;
+  const unitPrice = PLAN_PRICING[cycle].price;
+  const subtotal = unitPrice * quantity;
+
   return (
     <div>
       <div className="text-center max-w-xl mx-auto">
         <h2 className="font-display text-3xl sm:text-4xl font-black">Choose your license</h2>
-        <p className="mt-2 text-sm text-muted-foreground">All plans include the full Pro feature set.</p>
+        <p className="mt-2 text-sm text-muted-foreground">All Pro licenses include the full feature set. Each license unlocks {MACHINES_PER_LICENSE} connected machines.</p>
       </div>
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -64,6 +72,54 @@ export function PlanStep({
             </button>
           );
         })}
+      </div>
+
+      {/* Quantity selector */}
+      <div className="mt-8 rounded-2xl border border-lemon/30 bg-card/60 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+        <div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">License quantity</div>
+          <div className="mt-1 text-sm text-foreground/90">
+            <span className="font-semibold">{quantity}</span> license{quantity > 1 ? "s" : ""} · unlocks{" "}
+            <span className="font-semibold text-lemon">{machines} connected machine{machines > 1 ? "s" : ""}</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="inline-flex items-center rounded-full border border-border bg-background/50 p-1">
+            <button
+              type="button"
+              onClick={() => onQuantityChange(Math.max(1, quantity - 1))}
+              className="grid h-9 w-9 place-items-center rounded-full hover:bg-muted transition-colors disabled:opacity-40"
+              disabled={quantity <= 1}
+              aria-label="Decrease quantity"
+            >
+              <Minus className="h-4 w-4" />
+            </button>
+            <input
+              type="number"
+              min={1}
+              max={99}
+              value={quantity}
+              onChange={(e) => {
+                const v = parseInt(e.target.value, 10);
+                onQuantityChange(Number.isFinite(v) && v > 0 ? Math.min(99, v) : 1);
+              }}
+              className="w-12 bg-transparent text-center font-display text-lg font-bold outline-none"
+            />
+            <button
+              type="button"
+              onClick={() => onQuantityChange(Math.min(99, quantity + 1))}
+              className="grid h-9 w-9 place-items-center rounded-full hover:bg-muted transition-colors"
+              aria-label="Increase quantity"
+            >
+              <Plus className="h-4 w-4" />
+            </button>
+          </div>
+          <div className="text-right">
+            <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Subtotal</div>
+            <div className="font-display text-xl font-black">฿{subtotal.toLocaleString()}</div>
+          </div>
+        </div>
       </div>
 
       <Nav onBack={onBack} onNext={onNext} />
