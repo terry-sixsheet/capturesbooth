@@ -9,7 +9,8 @@ import {
   Rocket, ShieldCheck, Gauge, Globe2,
   ArrowRight, Check,
 } from "lucide-react";
-import type { LucideIcon, ReactNode } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
 export const Route = createFileRoute("/features")({
   head: () => ({
