@@ -37,6 +37,7 @@ const enterpriseFeatures = [
   "Everything in PRO",
   "Unlimited events & captures",
   "Full custom experiences",
+  "AI Photobooth features",
   "Custom integrations & API",
   "Dedicated account manager",
   "Priority onsite support",
