@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Megaphone, CreditCard, ArrowRight } from "lucide-react";
+import { Megaphone, CreditCard, Camera, Printer, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
@@ -19,21 +19,39 @@ type Module = {
 const modules: Module[] = [
   {
     icon: Megaphone,
-    name: "Promotion Engine",
-    headline: "Bring guests back with interactive promotions.",
-    price: "+1,000 THB",
+    name: "Coupon Code System",
+    headline: "Bring guests back with coupon-driven promotions.",
+    price: "+2,000 THB",
     features: ["Promo campaigns", "QR redemption", "Discount codes", "Reward experiences"],
     outcome: "Increase engagement and repeat customers.",
     cta: { label: "Add to Plan", to: "/buy" },
   },
   {
+    icon: Camera,
+    name: "Multi Camera Control",
+    headline: "Run multiple camera angles from one flow.",
+    price: "+5,000 THB",
+    features: ["Multi-camera switching", "Synchronized capture", "Per-camera profiles", "Live preview"],
+    outcome: "Deliver richer, multi-angle event content.",
+    cta: { label: "Add to Plan", to: "/buy" },
+  },
+  {
+    icon: Printer,
+    name: "Multi Print Features",
+    headline: "Control multiple printers and layouts at once.",
+    price: "+2,000 THB",
+    features: ["Multi-printer queue", "Layout per printer", "Print routing rules", "High-volume support"],
+    outcome: "Scale printing without slowing the guest flow.",
+    cta: { label: "Add to Plan", to: "/buy" },
+  },
+  {
     icon: CreditCard,
-    name: "CAP*TURES PAY",
+    name: "Payment Integration",
     headline: "Turn every booth into a revenue channel.",
     price: "From Free",
     options: [
-      { label: "ChillPay Partner", price: "Rate 2.9%", note: "Free Integration" },
-      { label: "Other Payment Gateway", price: "Upon Requirement", note: "Custom Integration" },
+      { label: "ChillPay (Free)", price: "PromptPay 1.9% / Other 3.2%", note: "Free integration with our partner" },
+      { label: "Other Gateways", price: "Upon Requirement", note: "Custom integration" },
     ],
     outcome: "Accept payments directly inside the event experience.",
     cta: { label: "Add to Plan", to: "/buy" },
@@ -44,8 +62,8 @@ const modules: Module[] = [
 export function AddonsExtend({ showPrice = true }: { showPrice?: boolean }) {
   return (
     <Section
-      eyebrow="Stage 3 · Scale"
-      title={<>Scale Your <span className="text-orange-impact">Experience</span></>}
+      eyebrow="Additional Features"
+      title={<>Additional <span className="text-orange-impact">Features</span></>}
       description="Power-ups for modern event businesses — expand what your booth can do."
     >
       <div className="grid gap-5 md:grid-cols-2">

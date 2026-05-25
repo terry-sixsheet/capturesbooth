@@ -5,34 +5,36 @@ import { Link } from "@tanstack/react-router";
 
 type BillingCycle = "week" | "month" | "year";
 
-const growPricing: Record<BillingCycle, { price: string; period: string; note: string }> = {
+const proPricing: Record<BillingCycle, { price: string; period: string; note: string }> = {
   week: { price: "1,500", period: "/ week", note: "Perfect for one-off events" },
   month: { price: "2,500", period: "/ month", note: "Flexible monthly billing" },
   year: { price: "5,900", period: "/ year", note: "Best value — save over 80%" },
 };
 
 const startFeatures = [
-  "Single event",
+  "Multi-event management — Limited 200 captures per event",
   "DSLR + webcam support",
-  "Photo + GIF capture",
-  "Printing system",
-  "Frame editor",
-  "Basic templates",
-  "200 captures per event",
+  "Photo captures, GIF captures",
+  "Printing configure support",
+  "Design layout frame",
+  "Guest flow timeout & global rotation",
+  "Basic templates (default)",
+  "1 connected machine",
 ];
 
-const growFeatures = [
+const proFeatures = [
   "Everything in START",
-  "Multi-event management",
-  "Online gallery",
-  "QR sharing",
-  "Business analytics",
-  "Faster workflows",
-  "Cloud sharing",
+  "Live photo captures",
+  "QR sharing and online gallery",
+  "Filter features",
+  "Sticker features",
+  "Advanced configuration for Pro (see Manual)",
+  "Import & export events template",
+  "2 connected machines per license",
 ];
 
 const enterpriseFeatures = [
-  "Everything in GROW",
+  "Everything in PRO",
   "Unlimited events & captures",
   "Full custom experiences",
   "Custom integrations & API",
@@ -43,12 +45,12 @@ const enterpriseFeatures = [
 
 export function PricingPreview() {
   const [cycle, setCycle] = useState<BillingCycle>("year");
-  const grow = growPricing[cycle];
+  const pro = proPricing[cycle];
 
   return (
     <Section
       eyebrow="Choose Your Stage"
-      title={<>Start. Grow. <span className="text-lemon">Scale.</span></>}
+      title={<>Start. Pro. <span className="text-lemon">Scale.</span></>}
       description="A growth journey for modern event experience businesses — not just another pricing page."
       align="center"
     >
@@ -73,7 +75,7 @@ export function PricingPreview() {
           <ul className="mt-6 space-y-3 text-sm flex-1">
             {startFeatures.map((it) => (
               <li key={it} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-muted text-foreground">
+                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-muted text-foreground shrink-0">
                   <Check className="h-3 w-3" />
                 </span>
                 <span className="text-foreground/90">{it}</span>
@@ -90,7 +92,7 @@ export function PricingPreview() {
           </Link>
         </div>
 
-        {/* GROW */}
+        {/* PRO */}
         <div className="relative rounded-3xl p-8 hover-lift bg-gradient-to-br from-lemon/15 via-card to-card border border-lemon/40 glow-lemon flex flex-col">
           <span className="absolute -top-3 right-6 inline-flex items-center gap-1 rounded-full bg-lemon px-3 py-1 text-[10px] font-black uppercase tracking-widest text-primary-foreground">
             <Sparkles className="h-3 w-3" />
@@ -98,7 +100,7 @@ export function PricingPreview() {
           </span>
           <div className="flex items-center gap-2">
             <span className="rounded-full bg-lemon/15 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-lemon">
-              Stage 2 · Grow
+              Stage 2 · Pro
             </span>
           </div>
           <h3 className="mt-4 font-display text-3xl font-bold">Turn your booth into a real business.</h3>
@@ -124,15 +126,15 @@ export function PricingPreview() {
           </div>
 
           <div className="mt-6 flex items-baseline gap-2">
-            <span className="font-display text-5xl font-black">฿{grow.price}</span>
-            <span className="text-muted-foreground">{grow.period}</span>
+            <span className="font-display text-5xl font-black">฿{pro.price}</span>
+            <span className="text-muted-foreground">{pro.period}</span>
           </div>
-          <div className="mt-1 text-xs text-muted-foreground">{grow.note}</div>
+          <div className="mt-1 text-xs text-muted-foreground">{pro.note}</div>
 
           <ul className="mt-6 space-y-3 text-sm flex-1">
-            {growFeatures.map((it) => (
+            {proFeatures.map((it) => (
               <li key={it} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-lemon text-primary-foreground">
+                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-lemon text-primary-foreground shrink-0">
                   <Check className="h-3 w-3" />
                 </span>
                 <span className="text-foreground/90">{it}</span>
@@ -145,7 +147,7 @@ export function PricingPreview() {
             search={{ cycle }}
             className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-transform hover:scale-[1.02] bg-lemon text-primary-foreground"
           >
-            Start Growing
+            Go Pro
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -172,7 +174,7 @@ export function PricingPreview() {
           <ul className="mt-6 space-y-3 text-sm flex-1">
             {enterpriseFeatures.map((it) => (
               <li key={it} className="flex items-start gap-3">
-                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-muted text-foreground">
+                <span className="mt-0.5 grid h-5 w-5 place-items-center rounded-full bg-muted text-foreground shrink-0">
                   <Check className="h-3 w-3" />
                 </span>
                 <span className="text-foreground/90">{it}</span>
