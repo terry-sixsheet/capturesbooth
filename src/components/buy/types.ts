@@ -1,6 +1,6 @@
 export type BillingCycle = "week" | "month" | "year";
 
-export type AddonId = "coupon" | "multicam" | "multiprint" | "payment";
+export type AddonId = "coupon" | "multicam" | "multiprint" | "payment" | "aiphotobooth";
 
 export const MACHINES_PER_LICENSE = 2;
 
