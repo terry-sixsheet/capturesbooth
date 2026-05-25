@@ -1,9 +1,14 @@
-const logos = [
-  "CAP*TURES PHOTOBOOTH SOLUTION",
-  "ANDY & FINE — PHOTOHOUSE",
-  "POSE OFFICE (PHUKET)",
-  "CAP*TURES (LAOS)",
-  "TRUE ALPHA HUB x SUCH A SMALL WORLD",
+import masterpieceHospital from "@/assets/customers/masterpiece-hospital.png";
+
+type LogoItem = { name: string; image?: string };
+
+const logos: LogoItem[] = [
+  { name: "CAP*TURES PHOTOBOOTH SOLUTION" },
+  { name: "ANDY & FINE — PHOTOHOUSE" },
+  { name: "POSE OFFICE (PHUKET)" },
+  { name: "CAP*TURES (LAOS)" },
+  { name: "TRUE ALPHA HUB x SUCH A SMALL WORLD" },
+  { name: "Masterpiece Hospital", image: masterpieceHospital },
 ];
 
 const metrics = [
@@ -29,15 +34,24 @@ export function TrustedBy() {
           Trusted by event teams, agencies & studios
         </div>
         <div className="overflow-hidden">
-          <div className="flex w-max gap-16 animate-marquee">
-            {[...logos, ...logos].map((logo, i) => (
-              <span
-                key={i}
-                className="font-display text-2xl font-black tracking-widest text-muted-foreground hover:text-lemon transition-colors whitespace-nowrap"
-              >
-                {logo}
-              </span>
-            ))}
+          <div className="flex w-max items-center gap-16 animate-marquee">
+            {[...logos, ...logos].map((logo, i) =>
+              logo.image ? (
+                <img
+                  key={i}
+                  src={logo.image}
+                  alt={logo.name}
+                  className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity bg-white/90 rounded-md px-3 py-1.5"
+                />
+              ) : (
+                <span
+                  key={i}
+                  className="font-display text-2xl font-black tracking-widest text-muted-foreground hover:text-lemon transition-colors whitespace-nowrap"
+                >
+                  {logo.name}
+                </span>
+              )
+            )}
           </div>
         </div>
       </div>
