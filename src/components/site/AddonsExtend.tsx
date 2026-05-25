@@ -45,6 +45,15 @@ const modules: Module[] = [
     cta: { label: "Add to Plan", to: "/buy" },
   },
   {
+    icon: Sparkles,
+    name: "AI Photobooth",
+    headline: "Transform every shot with intelligent AI effects.",
+    price: "+3,000 THB",
+    features: ["AI background replacement", "Smart portrait enhancement", "AI filters & style transfer", "Real-time face effects"],
+    outcome: "Give guests a futuristic, share-worthy photo experience.",
+    cta: { label: "Add to Plan", to: "/buy" },
+  },
+  {
     icon: CreditCard,
     name: "Payment Integration",
     headline: "Turn every booth into a revenue channel.",
