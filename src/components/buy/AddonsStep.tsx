@@ -1,9 +1,10 @@
 import { Check, Plus } from "lucide-react";
-import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING } from "./types";
+import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
 import { Nav } from "./PlanStep";
 
 export function AddonsStep({
   cycle,
+  quantity,
   selected,
   onToggle,
   notes,
@@ -12,6 +13,7 @@ export function AddonsStep({
   onBack,
 }: {
   cycle: BillingCycle;
+  quantity: number;
   selected: AddonId[];
   onToggle: (id: AddonId) => void;
   notes: string;
@@ -19,10 +21,11 @@ export function AddonsStep({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const planPrice = PLAN_PRICING[cycle].price;
+  const planPrice = PLAN_PRICING[cycle].price * quantity;
   const addonsTotal = ADDONS.filter((a) => selected.includes(a.id) && typeof a.price === "number")
     .reduce((s, a) => s + (a.price as number), 0);
   const total = planPrice + addonsTotal;
+  const machines = quantity * MACHINES_PER_LICENSE;
 
   return (
     <div>
@@ -93,7 +96,7 @@ export function AddonsStep({
           </div>
         </div>
         <div className="text-xs text-muted-foreground text-right">
-          {PLAN_PRICING[cycle].label}
+          {quantity}× {PLAN_PRICING[cycle].label} · {machines} machines
           {selected.length > 0 && ` + ${selected.length} add-on${selected.length > 1 ? "s" : ""}`}
         </div>
       </div>
