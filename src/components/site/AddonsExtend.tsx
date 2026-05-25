@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Megaphone, CreditCard, Camera, Printer, Sparkles, ArrowRight } from "lucide-react";
+import { Megaphone, CreditCard, Camera, Printer, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import chillpayLogo from "@/assets/chillpay-logo.png";
 
@@ -42,15 +42,6 @@ const modules: Module[] = [
     price: "+2,000 THB",
     features: ["Multi-printer queue", "Layout per printer", "Print routing rules", "High-volume support"],
     outcome: "Scale printing without slowing the guest flow.",
-    cta: { label: "Add to Plan", to: "/buy" },
-  },
-  {
-    icon: Sparkles,
-    name: "AI Photobooth",
-    headline: "Transform every shot with intelligent AI effects.",
-    price: "+3,000 THB",
-    features: ["AI background replacement", "Smart portrait enhancement", "AI filters & style transfer", "Real-time face effects"],
-    outcome: "Give guests a futuristic, share-worthy photo experience.",
     cta: { label: "Add to Plan", to: "/buy" },
   },
   {
