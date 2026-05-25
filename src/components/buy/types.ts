@@ -1,6 +1,6 @@
 export type BillingCycle = "week" | "month" | "year";
 
-export type AddonId = "coupon" | "multicam" | "multiprint" | "payment";
+export type AddonId = "coupon" | "multicam" | "multiprint" | "payment" | "aiphotobooth";
 
 export const MACHINES_PER_LICENSE = 2;
 
@@ -28,6 +28,12 @@ export const ADDONS: { id: AddonId; title: string; price: number | "custom" | nu
     title: "Multi Print Features",
     price: 2000,
     items: ["Multi-printer queue", "Layout per printer", "Print routing rules", "High-volume support"],
+  },
+  {
+    id: "aiphotobooth",
+    title: "AI Photobooth",
+    price: 3000,
+    items: ["AI background replacement", "Smart portrait enhancement", "AI filters & style transfer", "Real-time face effects"],
   },
   {
     id: "payment",
