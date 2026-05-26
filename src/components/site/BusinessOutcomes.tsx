@@ -1,5 +1,8 @@
 import { Section } from "./Section";
 import { Sparkles, Briefcase, TrendingUp } from "lucide-react";
+import photoshareGallery from "@/assets/photoshare-gallery.png";
+import dashboardDevices from "@/assets/dashboard-devices.png";
+import dashboardReports from "@/assets/dashboard-reports.png";
 
 const groups = [
   {
@@ -7,6 +10,8 @@ const groups = [
     tag: "Event Experience",
     title: "Turn every event into a branded interactive moment.",
     body: "Live galleries, AI experiences, and instant sharing keep guests engaged long after the booth closes.",
+    image: photoshareGallery,
+    imageAlt: "Live photoshare gallery with guest captures",
     items: [
       { name: "Live Gallery", body: "A real-time wall guests can't stop watching." },
       { name: "Instant Sharing", body: "Guests receive and share photos in seconds." },
@@ -19,6 +24,8 @@ const groups = [
     tag: "Business Operations",
     title: "Run your entire studio from a single dashboard.",
     body: "Plan events, manage clients, and coordinate teams without juggling spreadsheets and chat threads.",
+    image: dashboardDevices,
+    imageAlt: "Operator dashboard showing all activated kiosks and device status",
     items: [
       { name: "Event Dashboard", body: "Every event, every status — at a glance." },
       { name: "Integration", body: "Connect Payment, CRM, and your legacy systems seamlessly." },
@@ -31,6 +38,8 @@ const groups = [
     tag: "Growth & Branding",
     title: "Grow into an experience business — not just a booth.",
     body: "Branding, lead capture, and analytics turn every event into measurable business value.",
+    image: dashboardReports,
+    imageAlt: "Analytics dashboard with revenue, conversion, and top frame insights",
     items: [
       { name: "Branding", body: "On-brand frames, overlays, and galleries." },
       { name: "Analytics", body: "See what's working across every event." },
@@ -49,7 +58,7 @@ export function BusinessOutcomes() {
       align="center"
     >
       <div className="space-y-8">
-        {groups.map(({ icon: Icon, tag, title, body, items }) => (
+        {groups.map(({ icon: Icon, tag, title, body, items, image, imageAlt }) => (
           <div key={tag} className="rounded-3xl glass p-8 sm:p-10 hover-lift">
             <div className="grid lg:grid-cols-[1.1fr_2fr] gap-10">
               <div>
@@ -59,6 +68,14 @@ export function BusinessOutcomes() {
                 </div>
                 <h3 className="mt-5 font-display text-2xl sm:text-3xl font-bold leading-tight text-balance">{title}</h3>
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{body}</p>
+                <div className="mt-6 rounded-2xl overflow-hidden border border-border bg-background/40 p-2">
+                  <img
+                    src={image}
+                    alt={imageAlt}
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {items.map((it) => (
