@@ -78,13 +78,13 @@ function Contact() {
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-lemon">
                 <Sparkles className="h-3 w-3" />
-                Expert Support Team
+                Meet your Photobooth Experts
               </div>
               <h3 className="mt-3 font-display text-2xl sm:text-3xl font-black leading-tight">
-                Real people. <span className="text-lemon">Real expertise.</span>
+                สวัสดีครับ — <span className="text-lemon">we're Captures.</span>
               </h3>
               <p className="mt-2 text-sm text-muted-foreground max-w-md">
-                A team of event tech specialists ready to help you ship the perfect experience.
+                A small Bangkok-based team of photobooth nerds who genuinely love event day. Tell us what you're planning — we'll help you make it unforgettable.
               </p>
             </div>
           </div>
