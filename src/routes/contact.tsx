@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Mail, MessageCircle, MapPin, Phone, ArrowUpRight, Headphones, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Phone, ArrowUpRight, Headphones, Clock, ShieldCheck, Sparkles, Crown, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import expertsImg from "@/assets/contact-experts.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -50,9 +51,9 @@ function Contact() {
   ];
 
   const promises = [
-    { icon: Clock, title: "Reply within 1 business hour", body: "Mon–Sat, 9:00–19:00 ICT. Real humans, no bots." },
-    { icon: Headphones, title: "Dedicated event specialist", body: "One expert from first message through event day." },
-    { icon: ShieldCheck, title: "Onsite & remote support", body: "We've supported 500+ events across Thailand." },
+    { icon: Heart, title: "We actually pick up the phone", body: "No bots, no ticket queues. Real Thai photobooth pros, reply within 1 hour (Mon–Sat, 9:00–19:00)." },
+    { icon: Headphones, title: "One friendly expert, start to finish", body: "Same person from your first 'สวัสดีครับ' on LINE all the way through event day." },
+    { icon: ShieldCheck, title: "We've been in your shoes", body: "500+ events across Thailand — weddings, brand activations, concerts. We know what game-day looks like." },
   ];
 
   return (
