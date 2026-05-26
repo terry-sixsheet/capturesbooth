@@ -48,7 +48,7 @@ export function ComparePlans() {
           </div>
           <div className="text-center">
             <div className="text-[10px] uppercase tracking-widest text-lemon">Stage 2</div>
-            <div className="font-display text-lg font-bold">Grow</div>
+            <div className="font-display text-lg font-bold">Pro</div>
           </div>
         </div>
         {rows.map((row, i) => (
