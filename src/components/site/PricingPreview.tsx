@@ -8,11 +8,11 @@ type BillingCycle = "week" | "month" | "year";
 const proPricing: Record<BillingCycle, { price: string; period: string; note: string }> = {
   week: { price: "1,500", period: "/ week", note: "Perfect for one-off events" },
   month: { price: "2,500", period: "/ month", note: "Flexible monthly billing" },
-  year: { price: "5,900", period: "/ year", note: "Best value — save over 80%" },
+  year: { price: "7,900", period: "/ year", note: "Best value — save over 80%" },
 };
 
 const startFeatures = [
-  "Multi-event management — Limited 200 captures per event",
+  "Multi-event management — Limited 50 captures per event",
   "DSLR + webcam support",
   "Photo captures, GIF captures",
   "Printing configure support",
