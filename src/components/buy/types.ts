@@ -2,12 +2,12 @@ export type BillingCycle = "week" | "month" | "year";
 
 export type AddonId = "coupon" | "multicam" | "multiprint" | "payment";
 
-export const MACHINES_PER_LICENSE = 2;
+export const EXTRA_TEST_MACHINES = 1;
 
 export const PLAN_PRICING: Record<BillingCycle, { price: number; label: string; bestFor: string; badge?: string }> = {
   week: { price: 1500, label: "1 Week", bestFor: "One-off events" },
   month: { price: 2500, label: "1 Month", bestFor: "Active operators" },
-  year: { price: 5900, label: "1 Year", bestFor: "Best value", badge: "Save 80%" },
+  year: { price: 7900, label: "1 Year", bestFor: "Best value", badge: "Save 80%" },
 };
 
 export const ADDONS: { id: AddonId; title: string; price: number | "custom" | null; note?: string; items: string[] }[] = [
