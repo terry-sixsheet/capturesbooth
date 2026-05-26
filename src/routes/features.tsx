@@ -282,7 +282,6 @@ function BusinessSection() {
     { icon: Activity, title: "Session Tracking" },
     { icon: CalendarRange, title: "Multi Event Management" },
   ];
-  const bars = [40, 65, 50, 80, 72, 95, 88];
   return (
     <SectionShell
       eyebrow="Business & Monetization"
@@ -291,38 +290,33 @@ function BusinessSection() {
       description="Built to help operators manage, monetize, and scale modern event experiences."
     >
       <div className="grid gap-6 lg:grid-cols-5">
-        <div className="lg:col-span-3 grid gap-5 sm:grid-cols-2">
+        {/* Reports dashboard preview */}
+        <div className="lg:col-span-3 rounded-3xl glass p-2 sm:p-3 bg-background border border-border overflow-hidden">
+          <img
+            src={dashboardReports}
+            alt="Kiosk activity reports dashboard with revenue, payments, and conversion metrics"
+            className="w-full h-auto rounded-2xl"
+            loading="lazy"
+          />
+        </div>
+        {/* Feature cards */}
+        <div className="lg:col-span-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
           {items.map((i) => <FeatureCard key={i.title} {...i} />)}
         </div>
-        {/* Dashboard mock */}
-        <div className="lg:col-span-2 rounded-3xl glass p-6 flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-xs text-muted-foreground">Captures this week</div>
-              <div className="font-display text-3xl font-black">12,480</div>
-            </div>
-            <span className="rounded-full bg-lemon/15 text-lemon px-2.5 py-0.5 text-xs font-bold">+24%</span>
-          </div>
-          <div className="flex items-end gap-1.5 h-24">
-            {bars.map((h, i) => (
-              <div key={i} className={`flex-1 rounded-sm ${i === bars.length - 1 ? "bg-lemon" : "bg-foreground/15"}`} style={{ height: `${h}%` }} />
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-3 text-xs">
-            <div className="rounded-xl bg-background/50 border border-border p-3">
-              <div className="text-muted-foreground">Revenue</div>
-              <div className="font-bold text-foreground mt-1">฿ 248,900</div>
-            </div>
-            <div className="rounded-xl bg-background/50 border border-border p-3">
-              <div className="text-muted-foreground">Live events</div>
-              <div className="font-bold text-foreground mt-1">3 active</div>
-            </div>
-          </div>
+        {/* Devices dashboard preview - full width below */}
+        <div className="lg:col-span-5 rounded-3xl glass p-2 sm:p-3 bg-background border border-border overflow-hidden">
+          <img
+            src={dashboardDevices}
+            alt="Activated kiosks device management dashboard"
+            className="w-full h-auto rounded-2xl"
+            loading="lazy"
+          />
         </div>
       </div>
     </SectionShell>
   );
 }
+
 
 /* ---------------- 6. Custom Experiences ---------------- */
 function CustomExperiencesSection() {
