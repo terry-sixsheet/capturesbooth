@@ -1,5 +1,5 @@
 import { Check, Minus, Plus } from "lucide-react";
-import { type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
+import { type BillingCycle, PLAN_PRICING, EXTRA_TEST_MACHINES } from "./types";
 
 const FEATURES = [
   "Everything in START",
@@ -9,7 +9,7 @@ const FEATURES = [
   "Sticker features",
   "Advanced configuration for Pro (see Manual)",
   "Import & export events template",
-  "2 connected machines per license",
+  "+1 additional connected machine for testing (e.g. buy 2 licenses, get 3 machines)",
 ];
 
 export function PlanStep({
