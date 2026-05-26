@@ -1,5 +1,5 @@
 import { Check, Plus } from "lucide-react";
-import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
+import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING, EXTRA_TEST_MACHINES } from "./types";
 import { Nav } from "./PlanStep";
 
 export function AddonsStep({
