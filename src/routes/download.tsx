@@ -16,8 +16,8 @@ export const Route = createFileRoute("/download")({
 
 const requirements = [
   { icon: Cpu, label: "Processor", value: "Intel Core i7 or AMD Ryzen 7 (8 cores or newer)" },
-  { icon: MemoryStick, label: "Memory", value: "16 GB RAM" },
-  { icon: HardDrive, label: "Storage", value: "512 GB SSD" },
+  { icon: MemoryStick, label: "Memory", value: "Minimum 8 GB RAM — Best Performance 16 GB RAM" },
+  { icon: HardDrive, label: "Storage", value: "Minimum 512 GB SSD" },
   { icon: Gpu, label: "Graphics", value: "Built-in graphics (Intel Iris Xe or AMD Radeon)" },
   { icon: Monitor, label: "Screen", value: '15.6" Full HD (1920×1080)' },
   { icon: Usb, label: "Connections", value: "2 USB-A + 1 USB-C, plus wired internet" },
