@@ -12,6 +12,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import eventCoverDefault from "@/assets/event-cover-default.png";
+import photoshareGallery from "@/assets/photoshare-gallery.png";
 
 export const Route = createFileRoute("/features")({
   head: () => ({
@@ -191,22 +192,13 @@ function SharingSection() {
       {/* Highlight card */}
       <div className="relative overflow-hidden rounded-3xl glass p-8 sm:p-12 mb-10 glow-lemon">
         <div className="absolute inset-0 radial-glow opacity-60 pointer-events-none" />
-        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
-          {[
-            { icon: Camera, label: "Capture" },
-            { icon: Download, label: "Download" },
-            { icon: Share2, label: "Share" },
-          ].map((s, i, arr) => (
-            <div key={s.label} className="flex items-center gap-6">
-              <div className="flex flex-col items-center gap-3">
-                <div className="grid h-16 w-16 place-items-center rounded-2xl bg-lemon text-primary-foreground">
-                  <s.icon className="h-7 w-7" />
-                </div>
-                <span className="font-display text-xl font-bold">{s.label}</span>
-              </div>
-              {i < arr.length - 1 && <ArrowRight className="hidden sm:block h-6 w-6 text-lemon" />}
-            </div>
-          ))}
+        <div className="relative rounded-2xl overflow-hidden border border-border">
+          <img
+            src={photoshareGallery}
+            alt="Photoshare gallery dashboard showing per-kiosk session history"
+            className="w-full h-auto block"
+            loading="lazy"
+          />
         </div>
         <p className="relative mt-6 text-center text-sm text-muted-foreground">
           From shutter to shareable in seconds — no app, no friction.
