@@ -22,7 +22,7 @@ export function FinalCta() {
             to="/download"
             className="inline-flex items-center gap-2 rounded-full bg-lemon px-7 py-4 text-sm font-bold text-primary-foreground hover:scale-[1.03] transition-transform animate-pulse-glow"
           >
-            Start Free Trial
+            Start Free Version
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link

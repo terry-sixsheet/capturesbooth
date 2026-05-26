@@ -1,5 +1,5 @@
 import { Check, Plus } from "lucide-react";
-import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
+import { ADDONS, type AddonId, type BillingCycle, PLAN_PRICING, EXTRA_TEST_MACHINES } from "./types";
 import { Nav } from "./PlanStep";
 
 export function AddonsStep({
@@ -25,7 +25,7 @@ export function AddonsStep({
   const addonsTotal = ADDONS.filter((a) => selected.includes(a.id) && typeof a.price === "number")
     .reduce((s, a) => s + (a.price as number), 0);
   const total = planPrice + addonsTotal;
-  const machines = quantity * MACHINES_PER_LICENSE;
+  const machines = quantity + EXTRA_TEST_MACHINES;
 
   return (
     <div>

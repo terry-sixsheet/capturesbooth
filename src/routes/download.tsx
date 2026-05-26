@@ -5,7 +5,7 @@ import { Download, Cpu, HardDrive, Monitor, Camera, MemoryStick, Gpu, Usb, Fan }
 export const Route = createFileRoute("/download")({
   head: () => ({
     meta: [
-      { title: "Download — CAP*TURES Free Trial" },
+      { title: "Download — CAP*TURES Free Version" },
       { name: "description", content: "Download the CAP*TURES Windows installer and start running events in minutes." },
       { property: "og:title", content: "Download CAP*TURES" },
       { property: "og:description", content: "Free trial. Windows installer. Quick setup." },
@@ -44,7 +44,7 @@ function DownloadPage() {
           <div className="font-display text-2xl font-bold">CAP*TURES Booth · v2.4</div>
           <div className="mt-1 text-sm text-muted-foreground">Windows installer · 184 MB</div>
           <button className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-lemon px-6 py-3.5 text-sm font-bold text-primary-foreground hover:scale-[1.03] transition-transform animate-pulse-glow">
-            <Download className="h-4 w-4" /> Download Free Trial
+            <Download className="h-4 w-4" /> Download Free Version
           </button>
         </div>
       </Section>

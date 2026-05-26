@@ -9,7 +9,7 @@ import {
 export const faqs = [
   { q: "Does it support Canon DSLR?", a: "Yes. CAP*TURES has native support for Canon DSLR cameras for the best image quality, plus webcam fallback for lighter setups." },
   { q: "Can I use a webcam?", a: "Absolutely — webcams work out of the box, ideal for lighter installations and self-photo studios." },
-  { q: "How does licensing work?", a: "Choose a free trial, or buy a Pro license by week, month, or year. Each license is tied to your account and activates the platform." },
+  { q: "How does licensing work?", a: "Choose a free version, or buy a Pro license by week, month, or year. Each license is tied to your account and activates the platform." },
   { q: "Can I print instantly?", a: "Yes — the built-in printing system supports strip and full-frame layouts with branded overlays for instant output." },
   { q: "How does QR sharing work?", a: "After capture, guests scan a QR to download photos, GIFs, and videos directly to their phone or via the online gallery." },
   { q: "Is internet required?", a: "Capture and printing run fully offline. Online gallery and QR sharing require internet only when uploading." },

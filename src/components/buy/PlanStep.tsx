@@ -1,5 +1,5 @@
 import { Check, Minus, Plus } from "lucide-react";
-import { type BillingCycle, PLAN_PRICING, MACHINES_PER_LICENSE } from "./types";
+import { type BillingCycle, PLAN_PRICING, EXTRA_TEST_MACHINES } from "./types";
 
 const FEATURES = [
   "Everything in START",
@@ -9,7 +9,7 @@ const FEATURES = [
   "Sticker features",
   "Advanced configuration for Pro (see Manual)",
   "Import & export events template",
-  "2 connected machines per license",
+  "+1 additional connected machine for testing (e.g. buy 2 licenses, get 3 machines)",
 ];
 
 export function PlanStep({
@@ -27,7 +27,7 @@ export function PlanStep({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const machines = quantity * MACHINES_PER_LICENSE;
+  const machines = quantity + EXTRA_TEST_MACHINES;
   const unitPrice = PLAN_PRICING[cycle].price;
   const subtotal = unitPrice * quantity;
 
@@ -35,7 +35,7 @@ export function PlanStep({
     <div>
       <div className="text-center max-w-xl mx-auto">
         <h2 className="font-display text-3xl sm:text-4xl font-black">Choose your license</h2>
-        <p className="mt-2 text-sm text-muted-foreground">All Pro licenses include the full feature set. Each license unlocks {MACHINES_PER_LICENSE} connected machines.</p>
+        <p className="mt-2 text-sm text-muted-foreground">All Pro licenses include the full feature set. Every purchase unlocks 1 additional connected machine for testing (e.g. buy 2 licenses, get {2 + EXTRA_TEST_MACHINES} machines).</p>
       </div>
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">

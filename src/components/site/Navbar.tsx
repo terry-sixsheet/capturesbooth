@@ -56,7 +56,7 @@ export function Navbar() {
             to="/download"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-lemon px-4 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform animate-pulse-glow"
           >
-            Download Free Trial
+            Download Free Version
           </Link>
           <button
             aria-label="Menu"
