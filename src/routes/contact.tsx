@@ -59,9 +59,9 @@ function Contact() {
   return (
     <>
       <Section
-        eyebrow="Contact"
-        title={<>Talk to our <span className="text-lemon">Expert</span></>}
-        description="Real photobooth professionals — not a ticket queue. Tell us about your event, studio, or custom build and we'll guide you end-to-end."
+        eyebrow="Say hi 👋"
+        title={<>Let's chat about your <span className="text-lemon">next event</span></>}
+        description="No pushy sales scripts. Just a quick, human conversation about what you're building — and how we can help make it brilliant."
         align="center"
       >
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] max-w-6xl mx-auto items-center">
@@ -136,6 +136,55 @@ function Contact() {
               </div>
             );
           })}
+        </div>
+      </Section>
+
+      <Section align="center">
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-lemon/30 bg-gradient-to-br from-lemon/15 via-background to-background p-8 sm:p-12">
+          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-lemon/20 blur-3xl" aria-hidden />
+          <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-lemon">
+                <Crown className="h-3 w-3" />
+                PRO License — Free Trial
+              </div>
+              <h3 className="mt-4 font-display text-3xl sm:text-4xl font-black leading-tight">
+                Try the <span className="text-lemon">PRO</span> license, on us.
+              </h3>
+              <p className="mt-3 text-base text-muted-foreground max-w-xl">
+                Want to test-drive every PRO feature before you commit? Request a free trial license and we'll get you set up — usually within the same day. No credit card, no strings.
+              </p>
+              <ul className="mt-5 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2 max-w-xl">
+                <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-lemon" /> Full PRO feature access</li>
+                <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-lemon" /> Personal onboarding call</li>
+                <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-lemon" /> Works on your own hardware</li>
+                <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-lemon" /> Same-day setup support</li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://line.me/R/ti/p/@sixsheet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <Button size="lg" className="w-full bg-lemon text-background hover:bg-lemon/90 font-bold">
+                  <MessageCircle className="h-5 w-5" />
+                  Request PRO Trial on LINE
+                  <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Button>
+              </a>
+              <a href="tel:+66802686632">
+                <Button size="lg" variant="outline" className="w-full border-lemon/40 hover:bg-lemon/10 font-bold">
+                  <Phone className="h-5 w-5" />
+                  Call us: 080-268-6632
+                </Button>
+              </a>
+              <p className="text-xs text-center text-muted-foreground mt-1">
+                Mon–Sat · 9:00–19:00 ICT · We reply fast 🚀
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
     </>
