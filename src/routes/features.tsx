@@ -6,9 +6,10 @@ import {
   Printer, Cpu, Server, Settings2,
   Ticket, CreditCard, BarChart3, Activity, CalendarRange,
   Wand2, Route as RouteIcon, Brush, Workflow, Crown,
-  Rocket, ShieldCheck, Gauge, Globe2,
+  Rocket, ShieldCheck, Gauge, Globe2, Scissors,
   ArrowRight, Check,
 } from "lucide-react";
+import captureFrames from "@/assets/capture-frames.png";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import eventCoverDefault from "@/assets/event-cover-default.png";
@@ -114,6 +115,7 @@ function CaptureSection() {
     { icon: Camera, title: "Photo Capture" },
     { icon: Film, title: "GIF Capture" },
     { icon: Zap, title: "Boomerang" },
+    { icon: Scissors, title: "Cutout" },
     { icon: Video, title: "Video Booth" },
     { icon: Aperture, title: "DSLR Camera Support" },
     { icon: ImageIcon, title: "Instant Capture Workflow" },
@@ -125,8 +127,24 @@ function CaptureSection() {
       accent="capture moments."
       description="Designed for modern events with fast and intuitive capture experiences."
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((i) => <FeatureCard key={i.title} {...i} />)}
+      <div className="grid gap-6 lg:grid-cols-5">
+        {/* Frame selection preview */}
+        <div className="lg:col-span-2 rounded-3xl glass p-6 flex flex-col gap-3">
+          <div className="text-xs uppercase tracking-[0.2em] text-lemon">Select A Frame</div>
+          <div className="rounded-xl border border-border overflow-hidden bg-black">
+            <img
+              src={captureFrames}
+              alt="In-booth frame selection screen showing branded photo strip layouts"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+          <p className="mt-1 text-xs text-muted-foreground">Guests pick a branded frame layout right at the booth.</p>
+        </div>
+        {/* Feature cards */}
+        <div className="lg:col-span-3 grid gap-5 sm:grid-cols-2">
+          {items.map((i) => <FeatureCard key={i.title} {...i} />)}
+        </div>
       </div>
     </SectionShell>
   );
