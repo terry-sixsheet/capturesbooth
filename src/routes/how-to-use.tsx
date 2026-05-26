@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { FileText, BookOpen, ArrowUpRight } from "lucide-react";
+import { BookOpen, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/how-to-use")({
   head: () => ({
@@ -76,18 +76,6 @@ function HowTo() {
             </div>
           ))}
         </div>
-      </Section>
-      <Section eyebrow="Setup Guide" title="Step-by-step">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {["Install Windows app", "Connect camera & printer", "Set up Cutout", "Create event, run flow"].map((s, i) => (
-            <div key={s} className="rounded-2xl border border-border bg-card/50 p-6">
-              <div className="font-display text-3xl font-black text-lemon">0{i + 1}</div>
-              <div className="mt-3 font-semibold">{s}</div>
-              <FileText className="mt-4 h-4 w-4 text-muted-foreground" />
-            </div>
-          ))}
-        </div>
-
       </Section>
     </>
   );
