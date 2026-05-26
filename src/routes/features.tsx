@@ -153,17 +153,13 @@ function CustomizationSection() {
         {/* Preview */}
         <div className="lg:col-span-2 rounded-3xl glass p-6 flex flex-col gap-3">
           <div className="text-xs uppercase tracking-[0.2em] text-lemon">Template Preview</div>
-          <div className="grid grid-cols-3 gap-3">
-            {[
-              "from-orange-impact/40 to-lemon/10",
-              "from-lemon/40 to-orange-impact/10",
-              "from-foreground/30 to-card",
-            ].map((g, i) => (
-              <div key={i} className={`aspect-[3/4] rounded-xl border border-border bg-gradient-to-br ${g} relative overflow-hidden`}>
-                <span className="absolute top-2 left-2 rounded bg-background/70 px-1.5 py-0.5 text-[9px] font-bold text-foreground">FRAME</span>
-                <span className="absolute bottom-2 right-2 text-[9px] text-foreground/70">★ Brand</span>
-              </div>
-            ))}
+          <div className="rounded-xl border border-border overflow-hidden bg-[#efece4]">
+            <img
+              src={eventCoverDefault}
+              alt="Your event template preview with branded photo strip"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
           </div>
           <p className="mt-1 text-xs text-muted-foreground">Switch templates, overlays, and brand assets in seconds.</p>
         </div>
