@@ -6,9 +6,10 @@ import {
   Printer, Cpu, Server, Settings2,
   Ticket, CreditCard, BarChart3, Activity, CalendarRange,
   Wand2, Route as RouteIcon, Brush, Workflow, Crown,
-  Rocket, ShieldCheck, Gauge, Globe2,
+  Rocket, ShieldCheck, Gauge, Globe2, Scissors,
   ArrowRight, Check,
 } from "lucide-react";
+import captureFrames from "@/assets/capture-frames.png";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import eventCoverDefault from "@/assets/event-cover-default.png";
