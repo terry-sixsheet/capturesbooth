@@ -25,7 +25,7 @@ export function AddonsStep({
   const addonsTotal = ADDONS.filter((a) => selected.includes(a.id) && typeof a.price === "number")
     .reduce((s, a) => s + (a.price as number), 0);
   const total = planPrice + addonsTotal;
-  const machines = quantity * MACHINES_PER_LICENSE;
+  const machines = quantity + EXTRA_TEST_MACHINES;
 
   return (
     <div>
