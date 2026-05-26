@@ -19,10 +19,10 @@ const requirements = [
   { icon: MemoryStick, label: "Memory", value: "Minimum 8 GB RAM — Best Performance 16 GB RAM" },
   { icon: HardDrive, label: "Storage", value: "Minimum 512 GB SSD" },
   { icon: Gpu, label: "Graphics", value: "Built-in graphics (Intel Iris Xe or AMD Radeon)" },
-  { icon: Monitor, label: "Screen", value: '15.6" Full HD (1920×1080)' },
   { icon: Usb, label: "Connections", value: "2 USB-A + 1 USB-C, plus wired internet" },
   { icon: Fan, label: "Power & Cooling", value: "Dual-fan laptop with 150W charger" },
   { icon: Camera, label: "Operating System", value: "Windows 11 (64-bit)" },
+  { icon: Printer, label: "Printer", value: "DNP, Canon, Epson & other Windows-compatible printers" },
 ];
 
 const changelog = [
