@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Download, Cpu, HardDrive, Monitor, Camera, MemoryStick, Gpu, Usb, Fan } from "lucide-react";
+import { Download, Cpu, HardDrive, Camera, MemoryStick, Gpu, Usb, Fan, Printer } from "lucide-react";
 
 export const Route = createFileRoute("/download")({
   head: () => ({
@@ -16,13 +16,13 @@ export const Route = createFileRoute("/download")({
 
 const requirements = [
   { icon: Cpu, label: "Processor", value: "Intel Core i7 or AMD Ryzen 7 (8 cores or newer)" },
-  { icon: MemoryStick, label: "Memory", value: "16 GB RAM" },
-  { icon: HardDrive, label: "Storage", value: "512 GB SSD" },
+  { icon: MemoryStick, label: "Memory", value: "Minimum 8 GB RAM — Best Performance 16 GB RAM" },
+  { icon: HardDrive, label: "Storage", value: "Minimum 512 GB SSD" },
   { icon: Gpu, label: "Graphics", value: "Built-in graphics (Intel Iris Xe or AMD Radeon)" },
-  { icon: Monitor, label: "Screen", value: '15.6" Full HD (1920×1080)' },
   { icon: Usb, label: "Connections", value: "2 USB-A + 1 USB-C, plus wired internet" },
   { icon: Fan, label: "Power & Cooling", value: "Dual-fan laptop with 150W charger" },
   { icon: Camera, label: "Operating System", value: "Windows 11 (64-bit)" },
+  { icon: Printer, label: "Printer", value: "DNP, Canon, Epson & other Windows-compatible printers" },
 ];
 
 const changelog = [
@@ -37,7 +37,7 @@ function DownloadPage() {
       <Section
         eyebrow="Download"
         title={<>Get CAP*TURES for <span className="text-lemon">Windows</span></>}
-        description="Free trial includes 200 images per event. Upgrade anytime to Pro."
+        description="Free Version includes 50 images per event. Upgrade anytime to Pro."
         align="center"
       >
         <div className="mx-auto max-w-xl rounded-3xl glass p-8 text-center glow-lemon">
