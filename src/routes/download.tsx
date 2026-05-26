@@ -37,7 +37,7 @@ function DownloadPage() {
       <Section
         eyebrow="Download"
         title={<>Get CAP*TURES for <span className="text-lemon">Windows</span></>}
-        description="Free trial includes 200 images per event. Upgrade anytime to Pro."
+        description="Free Version includes 50 images per event. Upgrade anytime to Pro."
         align="center"
       >
         <div className="mx-auto max-w-xl rounded-3xl glass p-8 text-center glow-lemon">
