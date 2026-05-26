@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { Download, Cpu, HardDrive, Monitor, Camera, MemoryStick, Gpu, Usb, Fan } from "lucide-react";
+import { Download, Cpu, HardDrive, Camera, MemoryStick, Gpu, Usb, Fan, Printer } from "lucide-react";
 
 export const Route = createFileRoute("/download")({
   head: () => ({
