@@ -12,6 +12,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import eventCoverDefault from "@/assets/event-cover-default.png";
+import photoshareGallery from "@/assets/photoshare-gallery.png";
 
 export const Route = createFileRoute("/features")({
   head: () => ({
