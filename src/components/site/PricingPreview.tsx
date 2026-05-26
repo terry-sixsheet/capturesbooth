@@ -30,7 +30,7 @@ const proFeatures = [
   "Sticker features",
   "Advanced configuration for Pro (see Manual)",
   "Import & export events template",
-  "2 connected machines per license",
+  "+1 additional connected machine for testing (e.g. buy 2 licenses, get 3 machines)",
 ];
 
 const enterpriseFeatures = [
