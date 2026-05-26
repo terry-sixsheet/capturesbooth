@@ -249,8 +249,25 @@ function HardwareSection() {
       accent="professional event operations."
       description="Designed for agencies, activations, and high-volume event environments."
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((i) => <FeatureCard key={i.title} {...i} />)}
+      <div className="grid gap-6 lg:grid-cols-5">
+        {/* Console preview */}
+        <div className="lg:col-span-3 rounded-3xl glass p-3 sm:p-4 order-2 lg:order-1">
+          <div className="rounded-2xl overflow-hidden border border-border bg-background">
+            <img
+              src={hardwareConsole}
+              alt="CAP*TURES operator console — Events & Frames configuration with camera, printer, sharing, filters, and system controls"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+          <p className="mt-3 px-2 pb-1 text-xs text-muted-foreground">
+            Operator console — configure cameras, printers, sharing, filters & system per event.
+          </p>
+        </div>
+        {/* Feature cards */}
+        <div className="lg:col-span-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-1 order-1 lg:order-2">
+          {items.map((i) => <FeatureCard key={i.title} {...i} />)}
+        </div>
       </div>
     </SectionShell>
   );
