@@ -16,13 +16,13 @@ export const Route = createFileRoute("/how-to-use")({
 
 const tutorials = [
   { title: "Install & First Event", time: "4 min", desc: "From download to first capture in under 5 minutes." },
-  { title: "Configure DSLR Camera", time: "6 min", desc: "Connect Canon, set focus, dial in lighting presets." },
-  { title: "Cutout & Green Screen", time: "5 min", desc: "Set up AI cutout and chroma backgrounds for branded scenes." },
-  { title: "Frame Editor Basics", time: "8 min", desc: "Design strips, full-frames, GIFs, and brand overlays." },
+  { title: "Configure Camera", time: "6 min", desc: "Connect Canon, set focus, dial in lighting presets." },
+  { title: "Setup Event Cover Images", time: "5 min", desc: "Set up AI cutout and chroma backgrounds for branded scenes." },
+  { title: "Frame Editor", time: "8 min", desc: "Design strips, full-frames, GIFs, and brand overlays." },
   { title: "Printer Configuration", time: "5 min", desc: "DNP, Canon, and Epson setup with print queue tuning." },
   { title: "QR Sharing & Online Gallery", time: "5 min", desc: "Cloud upload, photoshare gallery, and download links." },
   { title: "Payments & Coupons", time: "7 min", desc: "Chillpay integration, pricing, and promo redemption." },
-  { title: "Multi-Event Dashboard", time: "5 min", desc: "Manage workflows and devices across simultaneous events." },
+  { title: "Report and Dashboard", time: "5 min", desc: "Manage workflows and devices across simultaneous events." },
 ];
 
 
