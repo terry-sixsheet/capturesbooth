@@ -10,6 +10,7 @@ import {
   ArrowRight, Check,
 } from "lucide-react";
 import captureFrames from "@/assets/capture-frames.png";
+import hardwareConsole from "@/assets/hardware-console.png";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import eventCoverDefault from "@/assets/event-cover-default.png";
