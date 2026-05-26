@@ -17,11 +17,14 @@ export const Route = createFileRoute("/how-to-use")({
 const tutorials = [
   { title: "Install & First Event", time: "4 min", desc: "From download to first capture in under 5 minutes." },
   { title: "Configure DSLR Camera", time: "6 min", desc: "Connect Canon, set focus, dial in lighting presets." },
-  { title: "Frame Editor Basics", time: "8 min", desc: "Design strips, full-frames, and brand overlays." },
-  { title: "Enable QR Sharing & Gallery", time: "5 min", desc: "Cloud upload, online gallery, and download links." },
-  { title: "Set Up Payment + Coupons", time: "7 min", desc: "Chillpay integration and promo redemption." },
-  { title: "Multi-Event Dashboard", time: "5 min", desc: "Manage workflows across simultaneous events." },
+  { title: "Cutout & Green Screen", time: "5 min", desc: "Set up AI cutout and chroma backgrounds for branded scenes." },
+  { title: "Frame Editor Basics", time: "8 min", desc: "Design strips, full-frames, GIFs, and brand overlays." },
+  { title: "Printer Configuration", time: "5 min", desc: "DNP, Canon, and Epson setup with print queue tuning." },
+  { title: "QR Sharing & Online Gallery", time: "5 min", desc: "Cloud upload, photoshare gallery, and download links." },
+  { title: "Payments & Coupons", time: "7 min", desc: "Chillpay integration, pricing, and promo redemption." },
+  { title: "Multi-Event Dashboard", time: "5 min", desc: "Manage workflows and devices across simultaneous events." },
 ];
+
 
 
 function HowTo() {
@@ -75,8 +78,8 @@ function HowTo() {
         </div>
       </Section>
       <Section eyebrow="Setup Guide" title="Step-by-step">
-        <div className="grid gap-4 md:grid-cols-3">
-          {["Install Windows app", "Connect camera & printer", "Create event, run flow"].map((s, i) => (
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {["Install Windows app", "Connect camera & printer", "Set up Cutout", "Create event, run flow"].map((s, i) => (
             <div key={s} className="rounded-2xl border border-border bg-card/50 p-6">
               <div className="font-display text-3xl font-black text-lemon">0{i + 1}</div>
               <div className="mt-3 font-semibold">{s}</div>
@@ -84,6 +87,7 @@ function HowTo() {
             </div>
           ))}
         </div>
+
       </Section>
     </>
   );
