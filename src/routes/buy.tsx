@@ -47,6 +47,9 @@ function BuyPage() {
   return (
     <section className="relative py-16 sm:py-24 min-h-[80vh]">
       <div className="container-max">
+        <h1 className="mb-8 font-display text-3xl sm:text-4xl font-black text-balance">
+          Get CAP*TURES — Create your account &amp; choose your plan
+        </h1>
         <div className="mb-12">
           <StepIndicator steps={STEPS} current={step} />
         </div>

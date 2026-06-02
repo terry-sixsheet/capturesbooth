@@ -34,6 +34,21 @@ const changelog = [
 function DownloadPage() {
   return (
     <>
+      <section className="relative pt-28 pb-10 sm:pt-36 sm:pb-14 overflow-hidden">
+        <div className="absolute inset-0 radial-glow opacity-80 pointer-events-none" />
+        <div className="absolute inset-0 grid-bg opacity-[0.15] pointer-events-none" />
+        <div className="container-max relative">
+          <div className="max-w-4xl text-center mx-auto">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black leading-[1.02] text-balance">
+              Download CAP*TURES for <span className="text-lemon">Windows</span>
+            </h1>
+            <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Free Version includes 50 images per event. Upgrade anytime to Pro.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Section
         eyebrow="Download"
         title={<>Get CAP*TURES for <span className="text-lemon">Windows</span></>}
