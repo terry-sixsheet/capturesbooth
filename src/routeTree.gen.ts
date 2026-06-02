@@ -18,6 +18,7 @@ import { Route as DownloadRouteImport } from './routes/download'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BuyRouteImport } from './routes/buy'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CompareBestPhotoboothSoftwareRouteImport } from './routes/compare.best-photobooth-software'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -64,6 +65,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompareBestPhotoboothSoftwareRoute =
+  CompareBestPhotoboothSoftwareRouteImport.update({
+    id: '/compare/best-photobooth-software',
+    path: '/compare/best-photobooth-software',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/compare/best-photobooth-software': typeof CompareBestPhotoboothSoftwareRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/compare/best-photobooth-software': typeof CompareBestPhotoboothSoftwareRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +107,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/compare/best-photobooth-software': typeof CompareBestPhotoboothSoftwareRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/showcase'
     | '/sitemap.xml'
+    | '/compare/best-photobooth-software'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/showcase'
     | '/sitemap.xml'
+    | '/compare/best-photobooth-software'
   id:
     | '__root__'
     | '/'
@@ -133,6 +145,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/showcase'
     | '/sitemap.xml'
+    | '/compare/best-photobooth-software'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,6 +158,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   ShowcaseRoute: typeof ShowcaseRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CompareBestPhotoboothSoftwareRoute: typeof CompareBestPhotoboothSoftwareRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +226,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compare/best-photobooth-software': {
+      id: '/compare/best-photobooth-software'
+      path: '/compare/best-photobooth-software'
+      fullPath: '/compare/best-photobooth-software'
+      preLoaderRoute: typeof CompareBestPhotoboothSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +246,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   ShowcaseRoute: ShowcaseRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CompareBestPhotoboothSoftwareRoute: CompareBestPhotoboothSoftwareRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
