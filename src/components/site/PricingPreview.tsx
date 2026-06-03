@@ -23,7 +23,7 @@ const startFeatures = [
 
 const proFeatures = [
   "Everything in START",
-  "Unlimited captures",
+  "Unlimited Captures and Prints",
   "Live photo captures",
   "Guest flow timeout & global rotation",
   "QR sharing and online gallery",
