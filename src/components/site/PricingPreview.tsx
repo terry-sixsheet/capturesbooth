@@ -12,19 +12,20 @@ const proPricing: Record<BillingCycle, { price: string; period: string; note: st
 };
 
 const startFeatures = [
-  "Multi-event management — Limited 50 captures per event",
+  "Multi-event management — Limited to 25 prints per event",
   "DSLR + webcam support",
   "Photo captures, GIF captures",
   "Printing configure support",
   "Design layout frame",
-  "Guest flow timeout & global rotation",
   "Basic templates (default)",
   "1 connected machine",
 ];
 
 const proFeatures = [
   "Everything in START",
+  "Unlimited captures",
   "Live photo captures",
+  "Guest flow timeout & global rotation",
   "QR sharing and online gallery",
   "Filter features",
   "Sticker features",

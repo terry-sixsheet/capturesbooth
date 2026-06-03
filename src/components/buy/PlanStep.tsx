@@ -3,7 +3,9 @@ import { type BillingCycle, PLAN_PRICING, EXTRA_TEST_MACHINES } from "./types";
 
 const FEATURES = [
   "Everything in START",
+  "Unlimited captures",
   "Live photo captures",
+  "Guest flow timeout & global rotation",
   "QR sharing and online gallery",
   "Filter features",
   "Sticker features",
